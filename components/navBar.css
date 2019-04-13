@@ -45,6 +45,11 @@
     cursor: default;
 }
 
+#nav-bar .button:hover {
+    color: #a2ff94;
+    border-bottom-color: #a2ff94;
+}
+
 #nav-bar .social-tag {
     position: fixed;
     left: 50px;

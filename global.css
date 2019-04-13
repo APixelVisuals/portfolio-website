@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "Liberation";
+    src: url(/static/liberation.ttf);
+}
+
+html {
+    background-color: #131313;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #373e40;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+}

@@ -1,0 +1,66 @@
+#nav-bar .home-button {
+    display: inline-block;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+#nav-bar .home-button img {
+    width: 50px;
+    height: auto;
+}
+
+#nav-bar .home-button img:hover {
+    content:url("/static/apixel-gif.gif");
+}
+
+#nav-bar .bar {
+    display: inline-block;
+    position: fixed;
+    white-space: nowrap;
+    bottom: 25px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#nav-bar .side-bar {
+    display: inline-block;
+    position: fixed;
+    white-space: nowrap;
+    bottom: 175px;
+    left: 0px;
+    transform: translate(CALC(-50% + 25px), 0) rotate(-90deg);
+}
+
+#nav-bar .button {
+    display: inline-block;
+    color: white;
+    font-family: "Liberation";
+    font-size: 15px;
+    text-decoration: none;
+    border-bottom: 1px white solid;
+    margin: 15px;
+}
+
+#nav-bar .button:not([href]) {
+    cursor: default;
+}
+
+#nav-bar .social-tag {
+    position: fixed;
+    left: 50px;
+    padding: 15px 35px 10px;
+    background-color: #292929;
+    border: 2px #1b1b1b solid;
+    border-radius: 100px;
+    opacity: 0;
+    transition: opacity 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    pointer-events: none;
+    user-select: none;
+}
+
+#nav-bar .social-tag h1 {
+    color: white;
+    font-family: "Liberation";
+    font-size: 15px;
+    margin: auto;
+}

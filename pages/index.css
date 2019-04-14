@@ -1,0 +1,147 @@
+#index .title-wrapper {
+    width: 100%;
+    height: 100vh;
+}
+
+#index .title {
+    display: inline-block;
+    margin-top: 25vh;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#index .title .text {
+    color: white;
+    font-family: "Liberation";
+    font-size: 50px;
+    margin: auto;
+}
+
+#index .title .text span {
+    border-bottom: 5px #a2ff94 solid;
+}
+
+#index .title .text.two {
+    margin-top: 15px;
+    margin-left: 65px;
+}
+
+#index .arrows {
+    display: inline-block;
+    color: white;
+    font-family: "Times New Roman";
+    font-size: 20px;
+    word-spacing: 10px;
+    margin-left: 50%;
+    transform: translate(-50%, 0) rotate(180deg);
+    animation: arrows 1s infinite;
+    user-select: none;
+}
+
+@keyframes arrows {
+    0% {
+        margin-top: 50px;
+        opacity: 1;
+    }
+    100% {
+        margin-top: 65px;
+        opacity: 0;
+    }
+}
+
+#index .skill-set-title {
+    display: inline-block;
+    word-spacing: -15px;
+    margin-top: 35px;
+    margin-bottom: 65px;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#index .skill-set-title .text {
+    color: white;
+    font-family: "Liberation";
+    font-size: 50px;
+    margin: auto;
+}
+
+#index .skill-set-title .text span.a {
+    background-color: #a2ff943b;
+    padding-right: 20px;
+}
+
+#index .skill-set-title .text span.b {
+    border-bottom: 5px #a2ff94 solid;
+}
+
+#index .skill-set-title .text span.c {
+    border-top: 5px #a2ff94 solid;
+    padding-top: 30px;
+}
+
+#index .skill-set-title .text.two {
+    margin-top: 15px;
+    margin-left: 65px;
+}
+
+#index .skill-set {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#index .skill-set .skill {
+    width: 350px;
+    margin: 35px;
+}
+
+#index .skill-set .skill .name {
+    display: inline-block;
+    color: white;
+    font-family: "Liberation";
+    font-size: 15px;
+    border-radius: 100px;
+    padding: 8px 20px 3px;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#index .skill-set .skill .name.javascript {
+    color: black;
+    background-color: #f7e018;
+}
+
+#index .skill-set .skill .name.html-css {
+    background-color: #f26525;
+}
+
+#index .skill-set .skill .name.react {
+    color: black;
+    background-color: #60dbfb;
+}
+
+#index .skill-set .skill .name.mongodb {
+    background-color: #53ab4d;
+}
+
+#index .skill-set .skill .name.mysql {
+    background-color: #4479a1;
+}
+
+#index .skill-set .skill .name.git {
+    background-color: #f34f29;
+}
+
+#index .skill-set .skill .name.linux {
+    background-color: #000000;
+}
+
+#index .skill-set .skill .info {
+    display: inline-block;
+    color: white;
+    font-family: "Liberation";
+    font-size: 15px;
+    text-align: center;
+    font-weight: normal;
+}

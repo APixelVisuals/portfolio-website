@@ -1,5 +1,6 @@
 #nav-bar .home-button {
     display: inline-block;
+    position: fixed;
     margin-top: 25px;
     margin-left: 25px;
 }

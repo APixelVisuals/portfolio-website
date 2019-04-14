@@ -14,6 +14,8 @@ export default class Index extends React.Component {
                 visuals: [null, null, null, null, null, null, null],
                 my: [null, null],
                 skillSet: [null, null, null, null, null, null, null, null, null],
+                my2: [null, null],
+                work: [null, null, null, null]
             },
             jajascriptEasterEgg: true
         };
@@ -100,6 +102,29 @@ export default class Index extends React.Component {
 
                 </div>
 
+                <div className="work-title">
+                    <h1 className="text">{"My".split("").map((l, i) => <span className={this.state.titles.my2[i]}>{l}</span>)}</h1>
+                    <h1 className="text two">{"Work".split("").map((l, i) => <span className={this.state.titles.work[i]}>{l}</span>)}</h1>
+                </div>
+
+                <div className="work-wrapper">
+
+                    <div className="work">
+
+                        <a className="name geola" href="/work/geola" target="_blank">Geola</a>
+                        <h1 className="info">Geola is a bot built on the chat application Discord. It's used by community owners to encourage activity from their members, and can also be used to manage communities.</h1>
+
+                    </div>
+
+                    <div className="work">
+
+                        <a className="name apixel-visuals" href="/work/apixel-visuals" target="_blank">APixel Visuals</a>
+                        <h1 className="info">My website (yes — this one) is where I showcase my skills, work, and whatever else I decide to put on here.</h1>
+
+                    </div>
+
+                </div>
+
             </div>
         );
     };
@@ -128,6 +153,8 @@ export default class Index extends React.Component {
         this.state.titles.visuals = this.state.titles.visuals.map(getLetters);
         this.state.titles.my = this.state.titles.my.map(getLetters);
         this.state.titles.skillSet = this.state.titles.skillSet.map(getLetters);
+        this.state.titles.my2 = this.state.titles.my2.map(getLetters);
+        this.state.titles.work = this.state.titles.work.map(getLetters);
 
         //Update
         this.forceUpdate();

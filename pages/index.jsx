@@ -108,8 +108,8 @@ export default class Index extends React.Component {
 
         //Titles
         this.updateTitles();
-        this.titlesInterval = setInterval(this.updateTitles, 1000);
-        this.fastTitlesInterval = false;
+        this.titlesIntervalSpeed = 1000;
+        this.titlesInterval = setInterval(this.updateTitles, this.titlesIntervalSpeed);
 
         //JajaScript Easter Egg
         setTimeout(() => this.setState({ jajascriptEasterEgg: false }), 100);
@@ -135,8 +135,10 @@ export default class Index extends React.Component {
 
     toggleTitleSpeed = () => {
         clearInterval(this.titlesInterval);
-        this.fastTitlesInterval = !this.fastTitlesInterval;
-        this.titlesInterval = setInterval(this.updateTitles, this.fastTitlesInterval ? 100 : 1000);
+        const titlesIntervalSpeeds = [1000, 100, 10];
+        this.titlesIntervalSpeed = titlesIntervalSpeeds[titlesIntervalSpeeds.indexOf(this.titlesIntervalSpeed) + 1];
+        if (!this.titlesIntervalSpeed) this.titlesIntervalSpeed = titlesIntervalSpeeds[0];
+        this.titlesInterval = setInterval(this.updateTitles, this.titlesIntervalSpeed);
     };
 
 };

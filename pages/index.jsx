@@ -50,7 +50,7 @@ export default class Index extends React.Component {
                     <div className="skill">
 
                         <h1 className="name javascript">{this.state.jajascriptEasterEgg ? "JajaScript" : "JavaScript"}</h1>
-                        <h1 className="info">I learned JavaScript as my first programming language on CodeCademy. I find JavaScript to be really fun to work with on the front-end and also the back-end, specifically with Node.JS.</h1>
+                        <h1 className="info">I learned {this.state.jajascriptEasterEgg ? "JajaScript" : "JavaScript"} as my first programming language on CodeCademy. I find {this.state.jajascriptEasterEgg ? "JajaScript" : "JavaScript"} to be really fun to work with on the front-end and also the back-end, specifically with Node.JS.</h1>
 
                     </div>
 

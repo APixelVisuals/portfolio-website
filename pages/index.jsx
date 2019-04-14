@@ -41,7 +41,7 @@ export default class Index extends React.Component {
                         <h1 className="text two">{"Visuals".split("").map((l, i) => <span className={this.state.titles.visuals[i]}>{l}</span>)}</h1>
                     </div>
 
-                    <h1 className="arrows">^ ^ ^</h1>
+                    <h1 className={`arrows ${this.state.lolMode && "fast"}`}>^ ^ ^</h1>
 
                 </div>
 

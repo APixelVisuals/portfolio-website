@@ -57,6 +57,10 @@
     user-select: none;
 }
 
+#index .arrows.fast {
+    animation-duration: 0.01s;
+}
+
 @keyframes arrows {
     0% {
         margin-top: 50px;

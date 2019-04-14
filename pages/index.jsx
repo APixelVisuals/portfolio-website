@@ -29,6 +29,8 @@ export default class Index extends React.Component {
                 />
                 <NavBar />
 
+                <h1 className="title-speed-button" onClick={this.toggleTitleSpeed}>lol</h1>
+
                 <div className="title-wrapper">
 
                     <div className="title">
@@ -106,7 +108,8 @@ export default class Index extends React.Component {
 
         //Titles
         this.updateTitles();
-        setInterval(this.updateTitles, 1000);
+        this.titlesInterval = setInterval(this.updateTitles, 1000);
+        this.fastTitlesInterval = false;
 
         //JajaScript Easter Egg
         setTimeout(() => this.setState({ jajascriptEasterEgg: false }), 100);
@@ -128,6 +131,12 @@ export default class Index extends React.Component {
 
         //Update
         this.forceUpdate();
+    };
+
+    toggleTitleSpeed = () => {
+        clearInterval(this.titlesInterval);
+        this.fastTitlesInterval = !this.fastTitlesInterval;
+        this.titlesInterval = setInterval(this.updateTitles, this.fastTitlesInterval ? 100 : 1000);
     };
 
 };

@@ -8,7 +8,15 @@ export default class Index extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { jajascriptEasterEgg: true };
+        this.state = {
+            titles: {
+                apixel: [null, null, null, null, null, null],
+                visuals: [null, null, null, null, null, null, null],
+                my: [null, null],
+                skillSet: [null, null, null, null, null, null, null, null, null],
+            },
+            jajascriptEasterEgg: true
+        };
     };
 
     render = () => {
@@ -24,8 +32,8 @@ export default class Index extends React.Component {
                 <div className="title-wrapper">
 
                     <div className="title">
-                        <h1 className="text">A<span>Pi</span>xel</h1>
-                        <h1 className="text two">Vis<span>u</span>als</h1>
+                        <h1 className="text">{"APixel".split("").map((l, i) => <span className={this.state.titles.apixel[i]}>{l}</span>)}</h1>
+                        <h1 className="text two">{"Visuals".split("").map((l, i) => <span className={this.state.titles.visuals[i]}>{l}</span>)}</h1>
                     </div>
 
                     <h1 className="arrows">^ ^ ^</h1>
@@ -33,8 +41,8 @@ export default class Index extends React.Component {
                 </div>
 
                 <div className="skill-set-title">
-                    <h1 className="text"><span className="a">My</span></h1>
-                    <h1 className="text">S<span className="b">k</span>i<span className="c">ll</span> Set</h1>
+                    <h1 className="text">{"My".split("").map((l, i) => <span className={this.state.titles.my[i]}>{l}</span>)}</h1>
+                    <h1 className="text two">{"Skill Set".split("").map((l, i) => <span className={this.state.titles.skillSet[i]}>{l}</span>)}</h1>
                 </div>
 
                 <div className="skill-set">
@@ -95,7 +103,31 @@ export default class Index extends React.Component {
     };
 
     componentDidMount = () => {
+
+        //Titles
+        this.updateTitles();
+        setInterval(this.updateTitles, 1000);
+
+        //JajaScript Easter Egg
         setTimeout(() => this.setState({ jajascriptEasterEgg: false }), 100);
+    };
+
+    updateTitles = () => {
+
+        //Get letters
+        const getLetters = () => {
+            const letters = ["a", "b", "c"];
+            return letters[Math.floor(Math.random() * letters.length)]
+        };
+
+        //Set letters
+        this.state.titles.apixel = this.state.titles.apixel.map(getLetters);
+        this.state.titles.visuals = this.state.titles.visuals.map(getLetters);
+        this.state.titles.my = this.state.titles.my.map(getLetters);
+        this.state.titles.skillSet = this.state.titles.skillSet.map(getLetters);
+
+        //Update
+        this.forceUpdate();
     };
 
 };

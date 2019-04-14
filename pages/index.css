@@ -17,8 +17,16 @@
     margin: auto;
 }
 
-#index .title .text span {
+#index .text span.a {
     border-bottom: 5px #a2ff94 solid;
+}
+
+#index .text span.b {
+    background-color: #a2ff941c;
+}
+
+#index .text span.c {
+    color: #a2ff94;
 }
 
 #index .title .text.two {
@@ -63,25 +71,12 @@
     font-family: "Liberation";
     font-size: 50px;
     margin: auto;
-}
-
-#index .skill-set-title .text span.a {
-    background-color: #a2ff943b;
-    padding-right: 20px;
-}
-
-#index .skill-set-title .text span.b {
-    border-bottom: 5px #a2ff94 solid;
-}
-
-#index .skill-set-title .text span.c {
-    border-top: 5px #a2ff94 solid;
-    padding-top: 30px;
+    margin-left: 30px;
 }
 
 #index .skill-set-title .text.two {
     margin-top: 15px;
-    margin-left: 65px;
+    margin-left: 0px;
 }
 
 #index .skill-set {

@@ -6,6 +6,7 @@
     font-family: "Liberation";
     font-size: 10px;
     cursor: pointer;
+    user-select: none;
 }
 
 #index .title-wrapper {

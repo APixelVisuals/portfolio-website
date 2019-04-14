@@ -7,7 +7,7 @@ export default class NavBar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
-        this.updateSocialTagY = e => this.setState({ socialTagY: e.pageY - 18 });
+        this.updateSocialTagY = e => this.setState({ socialTagY: e.clientY - 18 });
     };
 
     render = () => {

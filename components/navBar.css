@@ -35,6 +35,12 @@
     z-index: 100;
 }
 
+#nav-bar .side-bar.flipped {
+    left: auto;
+    right: 0px;
+    transform: translate(CALC(50% - 25px), 0) rotate(90deg);
+}
+
 #nav-bar .button {
     display: inline-block;
     color: white;

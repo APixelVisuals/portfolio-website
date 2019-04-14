@@ -30,7 +30,7 @@ export default class Index extends React.Component {
                     title="APixel Visuals"
                     description="A description about me goes here lol"
                 />
-                <NavBar />
+                <NavBar flipSideBar={this.state.lolMode} />
 
                 <h1 className="lol-mode-button" onClick={this.toggleLolMode}>lol</h1>
 

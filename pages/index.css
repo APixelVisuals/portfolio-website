@@ -195,6 +195,7 @@
 
 #index .work-wrapper .work .name {
     display: inline-block;
+    position: relative;
     font-family: "Liberation";
     font-size: 40px;
     font-weight: bold;
@@ -202,17 +203,34 @@
     margin: auto;
 }
 
-#index .work-wrapper .work .name:hover {
-    border-bottom: 3.5px solid;
-    margin-bottom: -3.5px;
+#index .work-wrapper .work .name::before {
+    display: inline-block;
+    position: absolute;
+    width: 0px;
+    height: 4px;
+    margin-top: 45px;
+    content: "";
+    transition: 1s;
+}
+
+#index .work-wrapper .work .name:hover::before {
+    width: 100%;
 }
 
 #index .work-wrapper .work .name.geola {
     color: #10fbcd;
 }
 
+#index .work-wrapper .work .name.geola::before {
+    background-color: #10fbcd;
+}
+
 #index .work-wrapper .work .name.apixel-visuals {
     color: #a2ff94;
+}
+
+#index .work-wrapper .work .name.apixel-visuals::before {
+    background-color: #a2ff94;
 }
 
 #index .work-wrapper .work .info {

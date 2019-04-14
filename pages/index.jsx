@@ -6,6 +6,11 @@ import "./index.css";
 
 export default class Index extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = { jajascriptEasterEgg: true };
+    };
+
     render = () => {
         return (
             <div id="index">
@@ -36,7 +41,7 @@ export default class Index extends React.Component {
 
                     <div className="skill">
 
-                        <h1 className="name javascript">JavaScript</h1>
+                        <h1 className="name javascript">{this.state.jajascriptEasterEgg ? "JajaScript" : "JavaScript"}</h1>
                         <h1 className="info">I learned JavaScript as my first programming language on CodeCademy. I find JavaScript to be really fun to work with on the front-end and also the back-end, specifically with Node.JS.</h1>
 
                     </div>
@@ -87,6 +92,10 @@ export default class Index extends React.Component {
 
             </div>
         );
+    };
+
+    componentDidMount = () => {
+        setTimeout(() => this.setState({ jajascriptEasterEgg: false }), 100);
     };
 
 };

@@ -3,6 +3,7 @@
     position: fixed;
     margin-top: 25px;
     margin-left: 25px;
+    z-index: 100;
 }
 
 #nav-bar .home-button img {
@@ -21,6 +22,7 @@
     bottom: 25px;
     left: 50%;
     transform: translate(-50%, 0);
+    z-index: 100;
 }
 
 #nav-bar .side-bar {
@@ -30,6 +32,7 @@
     top: 50vh;
     left: 0px;
     transform: translate(CALC(-50% + 25px), 0) rotate(-90deg);
+    z-index: 100;
 }
 
 #nav-bar .button {

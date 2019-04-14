@@ -17,7 +17,8 @@ export default class Index extends React.Component {
                 my2: [null, null],
                 work: [null, null, null, null]
             },
-            jajascriptEasterEgg: true
+            jajascriptEasterEgg: true,
+            lolMode: false
         };
     };
 
@@ -31,7 +32,7 @@ export default class Index extends React.Component {
                 />
                 <NavBar />
 
-                <h1 className="title-speed-button" onClick={this.toggleTitleSpeed}>lol</h1>
+                <h1 className="lol-mode-button" onClick={this.toggleLolMode}>lol</h1>
 
                 <div className="title-wrapper">
 
@@ -133,8 +134,7 @@ export default class Index extends React.Component {
 
         //Titles
         this.updateTitles();
-        this.titlesIntervalSpeed = 1000;
-        this.titlesInterval = setInterval(this.updateTitles, this.titlesIntervalSpeed);
+        this.titlesInterval = setInterval(this.updateTitles, 1000);
 
         //JajaScript Easter Egg
         setTimeout(() => this.setState({ jajascriptEasterEgg: false }), 100);
@@ -160,12 +160,12 @@ export default class Index extends React.Component {
         this.forceUpdate();
     };
 
-    toggleTitleSpeed = () => {
+    toggleLolMode = async () => {
+
+        await this.setState({ lolMode: !this.state.lolMode });
+
         clearInterval(this.titlesInterval);
-        const titlesIntervalSpeeds = [1000, 100, 10];
-        this.titlesIntervalSpeed = titlesIntervalSpeeds[titlesIntervalSpeeds.indexOf(this.titlesIntervalSpeed) + 1];
-        if (!this.titlesIntervalSpeed) this.titlesIntervalSpeed = titlesIntervalSpeeds[0];
-        this.titlesInterval = setInterval(this.updateTitles, this.titlesIntervalSpeed);
+        this.titlesInterval = setInterval(this.updateTitles, this.state.lolMode ? 10 : 1000);
     };
 
 };

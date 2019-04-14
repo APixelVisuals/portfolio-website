@@ -23,7 +23,7 @@ export default class NavBar extends React.Component {
                     <a className="button" href="/work">Work</a>
                 </div>
 
-                <div className={`side-bar ${this.props.flipSideBar && "flipped"}`}>
+                <div className="side-bar">
                     <a className="button" onMouseOver={() => this.setState({ socialTag: true, socialTagText: "contact@idkyet.com" })} onMouseOut={() => this.setState({ socialTag: false })}>Email</a>
                     <a className="button" href="/twitter" target="_blank">Twitter</a>
                     <a className="button" onMouseOver={() => this.setState({ socialTag: true, socialTagText: "APixel Visuals#2820" })} onMouseOut={() => this.setState({ socialTag: false })}>Discord</a>

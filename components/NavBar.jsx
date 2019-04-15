@@ -6,7 +6,7 @@ export default class NavBar extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = { menuOpen: false };
         this.updateSocialTagY = e => this.setState({ socialTagY: e.clientY - 18 });
     };
 
@@ -25,6 +25,24 @@ export default class NavBar extends React.Component {
                     <a className="button" href="/tools">Tools</a>
                     <a className="button" href="/work">Work</a>
                     <a className="button" href="/accomplishments">Accomplishments</a>
+                </div>
+
+                <div className="bar mobile">
+                    <a className="button" href="/">🏠</a>
+                    <a className="button menu-button" onClick={() => this.setState({ menuOpen: true })}>Menu</a>
+                </div>
+
+                <div className={`menu ${this.state.menuOpen && "open"}`}>
+
+                    <h1 className="menu-close-button" onClick={() => this.setState({ menuOpen: false })}>x</h1>
+
+                    <a className="menu-button" href="/">🏠</a>
+                    <a className="menu-button" href="/about">About</a>
+                    <a className="menu-button" href="/skill-set">Skill Set</a>
+                    <a className="menu-button" href="/tools">Tools</a>
+                    <a className="menu-button" href="/work">Work</a>
+                    <a className="menu-button" href="/accomplishments">Accomplishments</a>
+
                 </div>
 
                 <div className="side-bar">

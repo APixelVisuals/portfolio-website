@@ -40,6 +40,20 @@
     z-index: 100;
 }
 
+#nav-bar .bar.mobile {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    #nav-bar .bar {
+        display: none;
+    }
+
+    #nav-bar .bar.mobile {
+        display: block;
+    }
+}
+
 #nav-bar .side-bar {
     display: inline-block;
     position: fixed;
@@ -58,9 +72,10 @@
     text-decoration: none;
     border-bottom: 1px white solid;
     margin: 15px;
+    cursor: pointer;
 }
 
-#nav-bar .button:not([href]) {
+#nav-bar .button:not([href]):not(.menu-button) {
     cursor: default;
 }
 
@@ -88,4 +103,56 @@
     font-family: "Liberation";
     font-size: 15px;
     margin: auto;
+}
+
+#nav-bar .menu {
+    position: fixed;
+    width: 100%;
+    background-color: #292929;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    bottom: 0px;
+    transform: translate(0, 100%);
+    transition: 1s cubic-bezier(0.215, 0.610, 0.355, 1);
+    z-index: 101;
+}
+
+#nav-bar .menu.open {
+    transform: none;
+}
+
+#nav-bar .menu .menu-button {
+    display: inline-block;
+    color: white;
+    font-family: "Liberation";
+    font-size: 20px;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#nav-bar .menu .menu-button::before {
+    display: inline-block;
+    position: absolute;
+    width: 0px;
+    height: 1.5px;
+    background-color: #a2ff94;
+    margin-top: 22px;
+    content: "";
+    transition: 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+#nav-bar .menu .menu-button:hover::before {
+    width: 100%;
+}
+
+#nav-bar .menu .menu-close-button {
+    position: absolute;
+    right: 20px;
+    color: white;
+    font-family: "Liberation";
+    font-size: 20px;
+    cursor: pointer;
 }

@@ -14,7 +14,9 @@ export default class NavBar extends React.Component {
         return (
             <div id="nav-bar">
 
-                <a className="home-button" href="/"><img src="/static/apixel.png" /></a>
+                <a className={`home-button ${this.props.lolMode && "forceGif"}`} href="/"><img src="/static/apixel.png" /></a>
+
+                <h1 className="lol-mode-button" onClick={this.props.toggleLolMode}>lol</h1>
 
                 <div className="bar">
                     <a className="button" href="/">🏠</a>

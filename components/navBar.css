@@ -11,8 +11,23 @@
     height: auto;
 }
 
+#nav-bar .home-button.forceGif img {
+    content:url("/static/apixel-gif.gif");
+}
+
 #nav-bar .home-button img:hover {
     content:url("/static/apixel-gif.gif");
+}
+
+#nav-bar .lol-mode-button {
+    position: fixed;
+    top: -5px;
+    right: 0px;
+    color: white;
+    font-family: "Liberation";
+    font-size: 10px;
+    cursor: pointer;
+    user-select: none;
 }
 
 #nav-bar .bar {

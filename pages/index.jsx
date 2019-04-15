@@ -17,8 +17,7 @@ export default class Index extends React.Component {
                 my2: [null, null],
                 work: [null, null, null, null]
             },
-            jajascriptEasterEgg: true,
-            lolMode: false
+            jajascriptEasterEgg: true
         };
     };
 
@@ -30,9 +29,7 @@ export default class Index extends React.Component {
                     title="APixel Visuals"
                     description="A description about me goes here lol"
                 />
-                <NavBar />
-
-                <h1 className="lol-mode-button" onClick={this.toggleLolMode}>lol</h1>
+                <NavBar lolMode={this.state.lolMode} toggleLolMode={this.toggleLolMode} />
 
                 <div className="title-wrapper">
 

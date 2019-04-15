@@ -3,6 +3,16 @@
     src: url(/static/liberation.ttf);
 }
 
+@font-face {
+    font-family: "Hermit";
+    src: url(/static/hermit.otf);
+}
+
+@font-face {
+    font-family: "Hermit Light";
+    src: url(/static/hermit-light.otf);
+}
+
 html {
     min-height: CALC(100vh - 108px);
     background-color: #1f1f1f;

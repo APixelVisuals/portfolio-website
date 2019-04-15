@@ -145,7 +145,7 @@ export default class Index extends React.Component {
         //Get letters
         const getLetters = () => {
             const letters = ["a", "b", "c"];
-            return letters[Math.floor(Math.random() * letters.length)]
+            return letters[Math.floor(Math.random() * letters.length)];
         };
 
         //Set letters

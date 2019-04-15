@@ -22,6 +22,7 @@ export default class NavBar extends React.Component {
                     <a className="button" href="/">🏠</a>
                     <a className="button" href="/about">About</a>
                     <a className="button" href="/skill-set">Skill Set</a>
+                    <a className="button" href="/tools">Tools</a>
                     <a className="button" href="/work">Work</a>
                     <a className="button" href="/accomplishments">Accomplishments</a>
                 </div>

@@ -4,6 +4,7 @@
 }
 
 html {
+    min-height: CALC(100vh - 108px);
     background-color: #1f1f1f;
     overflow-x: hidden;
     padding-bottom: 100px;
@@ -21,4 +22,16 @@ body {
 
 ::-webkit-scrollbar-thumb {
     background-color: #a2ff94;
+}
+
+#content {
+    width: CALC(100% - 250px);
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+}
+
+@media screen and (max-width: 900px) {
+    #content {
+        width: CALC(100% - 100px);
+    }
 }

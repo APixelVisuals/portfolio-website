@@ -1,0 +1,41 @@
+#about .top-margin {
+    display: inline-block;
+    margin-bottom: 165px;
+}
+
+#about .title {
+    display: inline-block;
+    margin-top: 85px;
+    margin-bottom: 20px;
+}
+
+#about .title .text {
+    color: white;
+    font-family: "Liberation";
+    font-size: 50px;
+    margin: auto;
+}
+
+#about .text span.a {
+    border-bottom: 5px #a2ff94 solid;
+}
+
+#about .text span.b {
+    background-color: #a2ff941c;
+}
+
+#about .text span.c {
+    color: #a2ff94;
+}
+
+#about .info {
+    display: inline-block;
+    color: white;
+    font-family: "Liberation";
+    font-size: 20px;
+    font-weight: normal;
+}
+
+#about .info span {
+    color: #a2ff94;
+}

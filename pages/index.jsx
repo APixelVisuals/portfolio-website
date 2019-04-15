@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "../components/Head";
 import NavBar from "../components/NavBar";
+import updateTitles from "../static/updateTitles";
 import "../global.css";
 import "./index.css";
 
@@ -130,31 +131,11 @@ export default class Index extends React.Component {
     componentDidMount = () => {
 
         //Titles
-        this.updateTitles();
-        this.titlesInterval = setInterval(this.updateTitles, 1000);
+        updateTitles(this);
+        this.titlesInterval = setInterval(() => updateTitles(this), 1000);
 
         //JajaScript Easter Egg
         setTimeout(() => this.setState({ jajascriptEasterEgg: false }), 100);
-    };
-
-    updateTitles = () => {
-
-        //Get letters
-        const getLetters = () => {
-            const letters = ["a", "b", "c"];
-            return letters[Math.floor(Math.random() * letters.length)];
-        };
-
-        //Set letters
-        this.state.titles.apixel = this.state.titles.apixel.map(getLetters);
-        this.state.titles.visuals = this.state.titles.visuals.map(getLetters);
-        this.state.titles.my = this.state.titles.my.map(getLetters);
-        this.state.titles.skillSet = this.state.titles.skillSet.map(getLetters);
-        this.state.titles.my2 = this.state.titles.my2.map(getLetters);
-        this.state.titles.work = this.state.titles.work.map(getLetters);
-
-        //Update
-        this.forceUpdate();
     };
 
     toggleLolMode = async () => {
@@ -162,7 +143,7 @@ export default class Index extends React.Component {
         await this.setState({ lolMode: !this.state.lolMode });
 
         clearInterval(this.titlesInterval);
-        this.titlesInterval = setInterval(this.updateTitles, this.state.lolMode ? 10 : 1000);
+        this.titlesInterval = setInterval(() => updateTitles(this), this.state.lolMode ? 10 : 1000);
     };
 
 };

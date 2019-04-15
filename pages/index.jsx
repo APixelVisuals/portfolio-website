@@ -53,7 +53,7 @@ export default class Index extends React.Component {
                     <div className="skill">
 
                         <h1 className="name javascript">{this.state.jajascriptEasterEgg ? "JajaScript" : "JavaScript"}</h1>
-                        <h1 className="info">I learned {this.state.jajascriptEasterEgg ? "JajaScript" : "JavaScript"} as my first programming language on CodeCademy. I find {this.state.jajascriptEasterEgg ? "JajaScript" : "JavaScript"} to be really fun to work with on the front-end and also the back-end, specifically with Node.JS.</h1>
+                        <h1 className="info">I learned {this.state.jajascriptEasterEgg ? "JajaScript" : "JavaScript"} as my first programming language on <a href="https://codecademy.com" target="_blank">CodeCademy</a>. I find {this.state.jajascriptEasterEgg ? "JajaScript" : "JavaScript"} to be really fun to work with on the front-end and also the back-end, specifically with Node.JS.</h1>
 
                     </div>
 
@@ -88,7 +88,7 @@ export default class Index extends React.Component {
                     <div className="skill">
 
                         <h1 className="name git">Git</h1>
-                        <h1 className="info">What kinda developer doesn't use Git? IMO, it's essential for just about any project. Git is great at what it does, since it's a very mature system. Ooh! Almost forgot to plug my GitHub! Check it out :)</h1>
+                        <h1 className="info">What kinda developer doesn't use Git? IMO, it's essential for just about any project. Git is great at what it does, since it's a very mature system. Ooh! Almost forgot to plug <a href="/github" target="_blank">my GitHub</a>! Check it out :)</h1>
 
                     </div>
 

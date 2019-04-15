@@ -146,6 +146,12 @@
     font-weight: normal;
 }
 
+#index .skill-set .skill .info a {
+    color: white;
+    text-decoration: none;
+    background-image: linear-gradient(#00000000 65%, #a2ff947e 65%);
+}
+
 #index .work-title {
     display: inline-block;
     word-spacing: -15px;

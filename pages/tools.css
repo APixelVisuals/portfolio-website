@@ -1,34 +1,34 @@
-#about .top-margin {
+#tools .top-margin {
     display: inline-block;
     margin-bottom: 165px;
 }
 
-#about .title {
+#tools .title {
     display: inline-block;
     margin-top: 85px;
     margin-bottom: 20px;
 }
 
-#about .title .text {
+#tools .title .text {
     color: white;
     font-family: "Liberation";
     font-size: 50px;
     margin: auto;
 }
 
-#about .text span.a {
+#tools .text span.a {
     border-bottom: 5px #a2ff94 solid;
 }
 
-#about .text span.b {
+#tools .text span.b {
     background-color: #a2ff941c;
 }
 
-#about .text span.c {
+#tools .text span.c {
     color: #a2ff94;
 }
 
-#about .name {
+#tools .name {
     color: white;
     font-family: "Liberation";
     font-size: 25px;
@@ -36,7 +36,7 @@
     margin-top: 25px;
 }
 
-#about .info {
+#tools .info {
     display: inline-block;
     color: white;
     font-family: "Hermit Light";
@@ -44,11 +44,11 @@
     font-weight: normal;
 }
 
-#about .info span {
+#tools .info span {
     color: #a2ff94;
 }
 
-#about .info a {
+#tools .info a {
     color: white;
     text-decoration: none;
     background-image: linear-gradient(#00000000 65%, #a2ff947e 65%);

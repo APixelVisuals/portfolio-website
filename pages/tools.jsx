@@ -18,11 +18,11 @@ export default class Tools extends React.Component {
 
     render = () => {
         return (
-            <div id="about">
+            <div id="tools">
 
                 <Head
-                    title="About - APixel Visuals"
-                    description="Just some information about myself and what I do"
+                    title="Tools - APixel Visuals"
+                    description="The tools I've found to help with my daily workflow"
                 />
                 <NavBar lolMode={this.state.lolMode} toggleLolMode={this.toggleLolMode} />
 

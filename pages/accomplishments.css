@@ -1,0 +1,74 @@
+#accomplishments .title {
+    display: inline-block;
+    margin-top: 125px;
+    margin-bottom: 20px;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#accomplishments .title .text {
+    color: white;
+    font-family: "Liberation";
+    font-size: 50px;
+    margin: auto;
+}
+
+#accomplishments .text span.a {
+    border-bottom: 5px #a2ff94 solid;
+}
+
+#accomplishments .text span.b {
+    background-color: #a2ff941c;
+}
+
+#accomplishments .text span.c {
+    color: #a2ff94;
+}
+
+#accomplishments .timeline {
+    position: relative;
+    width: 100%;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-top: 65px;
+}
+
+#accomplishments .timeline .line {
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: #a2ff94;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#accomplishments .timeline .accomplishment {
+    width: CALC(50% - 50px);
+    text-align: right;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#accomplishments .timeline .accomplishment.right {
+    margin-left: CALC(50% + 50px);
+    text-align: left;
+}
+
+#accomplishments .timeline .accomplishment .date {
+    color: white;
+    font-family: "Liberation";
+    font-size: 30px;
+}
+
+#accomplishments .timeline .accomplishment .info {
+    color: white;
+    font-family: "Hermit Light";
+    font-size: 20px;
+    font-weight: normal;
+}
+
+#accomplishments .timeline .accomplishment .info a {
+    color: white;
+    text-decoration: none;
+    background-image: linear-gradient(#00000000 65%, #a2ff947e 65%);
+}

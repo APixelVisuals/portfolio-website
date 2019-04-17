@@ -28,7 +28,7 @@ export default class Index extends React.Component {
 
                 <Head
                     title="APixel Visuals"
-                    description="A description about me goes here lol"
+                    description="I'm APixel, a programmer with an interest to explore new ideas"
                 />
                 <NavBar lolMode={this.state.lolMode} toggleLolMode={this.toggleLolMode} />
 

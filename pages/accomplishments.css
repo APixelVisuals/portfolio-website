@@ -50,8 +50,28 @@
 }
 
 #accomplishments .timeline .accomplishment.right {
-    margin-left: CALC(50% + 50px);
     text-align: left;
+    margin-left: CALC(50% + 50px);
+}
+
+@media screen and (max-width: 600px) {
+
+    #accomplishments .timeline .line {
+        display: none;
+    }
+
+    #accomplishments .timeline .accomplishment {
+        width: 100%;
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    #accomplishments .timeline .accomplishment.right {
+        text-align: center;
+        margin-left: 0px;
+    }
+
 }
 
 #accomplishments .timeline .accomplishment .date {

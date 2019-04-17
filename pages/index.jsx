@@ -135,7 +135,7 @@ export default class Index extends React.Component {
         this.titlesInterval = setInterval(() => updateTitles(this), 1000);
 
         //JajaScript Easter Egg
-        setTimeout(() => this.setState({ jajascriptEasterEgg: false }), 100);
+        setTimeout(() => this.setState({ jajascriptEasterEgg: false }), 500);
     };
 
     toggleLolMode = async () => {

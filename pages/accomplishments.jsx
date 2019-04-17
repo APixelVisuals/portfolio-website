@@ -63,12 +63,12 @@ export default class Accomplishments extends React.Component {
 
                         <div className="accomplishment right">
                             <h1 className="date">October 29, 2018</h1>
-                            <h1 className="info">I learned MongoDB and Mongoose and setup a MongoDB database on my VPS.</h1>
+                            <h1 className="info">I learned MongoDB and Mongoose and set up a MongoDB database on my VPS.</h1>
                         </div>
 
                         <div className="accomplishment">
                             <h1 className="date">November 9, 2017</h1>
-                            <h1 className="info">I setup a <a href="https://m.do.co/c/df0baa1472d8" target="_blank">DigitalOcean</a> VPS and deployed my <a href="/work/geola" target="_blank">first Node.JS app</a>.</h1>
+                            <h1 className="info">I set up a <a href="https://m.do.co/c/df0baa1472d8" target="_blank">DigitalOcean</a> VPS and deployed my <a href="/work/geola" target="_blank">first Node.JS app</a>.</h1>
                         </div>
 
                         <div className="accomplishment right">
@@ -78,7 +78,7 @@ export default class Accomplishments extends React.Component {
 
                         <div className="accomplishment">
                             <h1 className="date">May 29, 2017</h1>
-                            <h1 className="info">I learned MySQL and setup my first database on my local machine. I also learned how to use MySQL Workbench.</h1>
+                            <h1 className="info">I learned MySQL and set up my first database on my local machine. I also learned how to use MySQL Workbench.</h1>
                         </div>
 
                         <div className="accomplishment right">

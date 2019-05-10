@@ -35,13 +35,13 @@ export default class Work extends React.Component {
                     </div>
 
                     <a className="name geola" href="/work/geola">Geola</a>
-                    <h1 className="info">The premium-grade Discord bot</h1>
+                    <h1 className="info">Geola is a bot built on the chat application Discord. It's used by community owners to encourage activity from their members, and can also be used to manage communities.</h1>
 
                     <a className="name apixel-visuals" href="/work/apixel-visuals">APixel Visuals</a>
-                    <h1 className="info">Literally just this site. There's no slogan</h1>
+                    <h1 className="info">My website (yes — this one) is where I showcase my skills, work, and whatever else I decide to put on here.</h1>
 
                     <a className="name kogit" href="/work/kogit">Kogit</a>
-                    <h1 className="info">I didn't make a slogan for this one either...</h1>
+                    <h1 className="info">Kogit is a small CLI application written fully in Bash. Its goal is to get information about a given GitHub repository and display its details in a pleasing manner.</h1>
 
                 </div>
 

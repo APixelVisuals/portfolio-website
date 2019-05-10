@@ -40,6 +40,9 @@ export default class Work extends React.Component {
                     <a className="name apixel-visuals" href="/work/apixel-visuals">APixel Visuals</a>
                     <h1 className="info">Literally just this site. There's no slogan</h1>
 
+                    <a className="name kogit" href="/work/kogit">Kogit</a>
+                    <h1 className="info">I didn't make a slogan for this one either...</h1>
+
                 </div>
 
             </div>

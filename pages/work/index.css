@@ -68,6 +68,14 @@
     background-color: #a2ff94;
 }
 
+#work .name.kogit {
+    color: #ffdc48;
+}
+
+#work .name.kogit::before {
+    background-color: #ffdc48;
+}
+
 #work .info {
     color: white;
     font-family: "Hermit Light";

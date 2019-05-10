@@ -137,6 +137,10 @@
     background-color: #000000;
 }
 
+#index .skill-set .skill .name.bash-scripting {
+    background-color: #444444;
+}
+
 #index .skill-set .skill .info {
     display: inline-block;
     color: white;
@@ -230,6 +234,14 @@
 
 #index .work-wrapper .work .name.apixel-visuals::before {
     background-color: #a2ff94;
+}
+
+#index .work-wrapper .work .name.kogit {
+    color: #ffdc48;
+}
+
+#index .work-wrapper .work .name.kogit::before {
+    background-color: #ffdc48;
 }
 
 #index .work-wrapper .work .info {

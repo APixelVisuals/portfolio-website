@@ -99,6 +99,13 @@ export default class Index extends React.Component {
 
                     </div>
 
+                    <div className="skill">
+
+                        <h1 className="name bash-scripting">Bash Scripting</h1>
+                        <h1 className="info">I use Linux, so of course I know how to use bash, but I also find writing bash scripts really interesting. They're so useful! It's literally like giant functions that you can run whenever the hell you want!</h1>
+
+                    </div>
+
                 </div>
 
                 <div className="work-title">
@@ -119,6 +126,13 @@ export default class Index extends React.Component {
 
                         <a className="name apixel-visuals" href="/work/apixel-visuals" target="_blank">APixel Visuals</a>
                         <h1 className="info">My website (yes — this one) is where I showcase my skills, work, and whatever else I decide to put on here.</h1>
+
+                    </div>
+
+                    <div className="work">
+
+                        <a className="name kogit" href="/work/kogit" target="_blank">Kogit</a>
+                        <h1 className="info">Kogit is a small CLI application written fully in Bash. Its goal is to get information about a given GitHub repository and display its details in a pleasing manner.</h1>
 
                     </div>
 

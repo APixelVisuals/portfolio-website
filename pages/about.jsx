@@ -36,7 +36,7 @@ export default class About extends React.Component {
 
                     <h1 className="info">Hey! I'm APixel. I'm a programmer with an interest to explore new ideas. I started my journey around the summer of 2017 when I learned JavaScript on <a href="https://codecademy.com" target="_blank">CodeCademy</a>. Ever since, I've branched out to learn different skills. It is my absolute passion to push myself as I build new projects and explore concepts.</h1>
                     <h1 className="info">Over the months, I've also learned a lot about my workflow. I'm constantly refining the tools I use on a day to day basis, but you can find a full list of everything I use, ranging from Linux Mint to VS Code, over on my <a href="/tools" target="_blank">Tools page</a>.</h1>
-                    <h1 className="info">If you'd like to get in touch, feel free to contact me via <a href="/twitter" target="_blank">Twitter</a>, Discord <span>[APixel Visuals#2820]</span>, or plain old email <span>[contact@apixel.me]</span>.</h1>
+                    <h1 className="info">If you'd like to get in touch, feel free to contact me via <a href="/twitter" target="_blank">Twitter</a>, Discord <span>[APixel Visuals#2820]</span>, or plain old email <span>[apixelvisualsofficial@gmail.com]</span>.</h1>
 
                 </div>
 

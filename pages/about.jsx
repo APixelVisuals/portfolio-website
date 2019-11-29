@@ -2,8 +2,8 @@ import React from "react";
 import Head from "../components/Head";
 import NavBar from "../components/NavBar";
 import updateTitles from "../static/updateTitles";
-import "../global.css";
-import "./about.css";
+import "../global.scss";
+import "./about.scss";
 
 export default class About extends React.Component {
 

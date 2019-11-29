@@ -2,8 +2,8 @@ import React from "react";
 import Head from "../../components/Head";
 import NavBar from "../../components/NavBar";
 import updateTitles from "../../static/updateTitles";
-import "../../global.css";
-import "./apixel-visuals.css";
+import "../../global.scss";
+import "./apixel-visuals.scss";
 
 export default class APixelVisuals extends React.Component {
 

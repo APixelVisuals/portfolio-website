@@ -2,8 +2,8 @@ import React from "react";
 import Head from "../../components/Head";
 import NavBar from "../../components/NavBar";
 import updateTitles from "../../static/updateTitles";
-import "../../global.css";
-import "./kogit.css";
+import "../../global.scss";
+import "./kogit.scss";
 
 export default class Kogit extends React.Component {
 

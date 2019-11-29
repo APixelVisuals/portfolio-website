@@ -60,7 +60,7 @@
     white-space: nowrap;
     top: 50vh;
     left: 0px;
-    transform: translate(CALC(-50% + 25px), 0) rotate(-90deg);
+    transform: translate(calc(-50% + 25px), 0) rotate(-90deg);
     z-index: 100;
 }
 

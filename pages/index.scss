@@ -179,14 +179,14 @@
 }
 
 #index .work-wrapper {
-    width: CALC(100% - 250px);
+    width: calc(100% - 250px);
     margin-left: 50%;
     transform: translate(-50%, 0);
 }
 
 @media screen and (max-width: 900px) {
     #index .work-wrapper {
-        width: CALC(100% - 100px);
+        width: calc(100% - 100px);
     }
 }
 

@@ -1,6 +1,6 @@
 import React from "react";
-import "../global.css";
-import "./navBar.css";
+import "../global.scss";
+import "./navBar.scss";
 
 export default class NavBar extends React.Component {
 

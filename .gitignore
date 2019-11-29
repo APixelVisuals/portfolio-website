@@ -1,7 +1,5 @@
 # Node modules
 node_modules/
-package.json
-package-lock.json
 
 # Env
 .env

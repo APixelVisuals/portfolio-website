@@ -1,6 +1,6 @@
-const nextCSS = require("@zeit/next-css");
+const nextSASS = require("@zeit/next-sass");
 
-module.exports = nextCSS({
+module.exports = nextSASS({
     webpack: config => {
 
         // Fixes npm packages that depend on `fs` module

@@ -23,7 +23,7 @@ export default class Index extends React.Component {
 
     render = () => {
         return (
-            <div>
+            <div id="index">
 
                 <Head
                     title="APixel Visuals"

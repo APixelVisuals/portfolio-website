@@ -14,11 +14,11 @@
 }
 
 #nav-bar .home-button.forceGif img {
-    content:url("/static/apixel-gif.gif");
+    content: url("/static/apixel-gif.gif");
 }
 
 #nav-bar .home-button img:hover {
-    content:url("/static/apixel-gif.gif");
+    content: url("/static/apixel-gif.gif");
 }
 
 #nav-bar .lol-mode-button {
@@ -37,8 +37,7 @@
     position: fixed;
     white-space: nowrap;
     bottom: 25px;
-    left: 50%;
-    transform: translate(-50%, 0);
+    @include center;
     z-index: 100;
 }
 
@@ -131,8 +130,7 @@
     text-decoration: none;
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-left: 50%;
-    transform: translate(-50%, 0);
+    @include center;
 }
 
 #nav-bar .menu .menu-button::before {

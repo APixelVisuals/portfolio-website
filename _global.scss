@@ -14,6 +14,12 @@
     src: url(/static/hermit-light.otf);
 }
 
+//Mixins
+@mixin center {
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+}
+
 //HTML and body
 html {
     min-height: calc(100vh - 108px);

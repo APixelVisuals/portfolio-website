@@ -4,8 +4,7 @@
     display: inline-block;
     margin-top: 125px;
     margin-bottom: 20px;
-    margin-left: 50%;
-    transform: translate(-50%, 0);
+    @include center;
 }
 
 #accomplishments .title .text {
@@ -40,8 +39,7 @@
     width: 5px;
     height: 100%;
     background-color: #a2ff94;
-    left: 50%;
-    transform: translate(-50%, 0);
+    @include center;
 }
 
 #accomplishments .timeline .accomplishment {

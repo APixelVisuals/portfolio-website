@@ -1,94 +1,97 @@
 @import "../global";
 
-#accomplishments .title {
-    display: inline-block;
-    margin-top: 125px;
-    margin-bottom: 20px;
-    @include center;
-}
+#accomplishments {
+    .title {
+        display: inline-block;
+        margin-top: 125px;
+        margin-bottom: 20px;
+        @include center;
 
-#accomplishments .title .text {
-    color: white;
-    font-family: "Liberation";
-    font-size: 50px;
-    margin: auto;
-}
+        .text {
+            color: white;
+            font-family: "Liberation";
+            font-size: 50px;
+            margin: auto;
 
-#accomplishments .text span.a {
-    border-bottom: 5px #a2ff94 solid;
-}
+            span {
+                &.a {
+                    border-bottom: 5px #a2ff94 solid;
+                }
 
-#accomplishments .text span.b {
-    background-color: #a2ff941c;
-}
+                &.b {
+                    background-color: #a2ff941c;
+                }
 
-#accomplishments .text span.c {
-    color: #a2ff94;
-}
-
-#accomplishments .timeline {
-    position: relative;
-    width: 100%;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    margin-top: 65px;
-}
-
-#accomplishments .timeline .line {
-    position: absolute;
-    width: 5px;
-    height: 100%;
-    background-color: #a2ff94;
-    @include center;
-}
-
-#accomplishments .timeline .accomplishment {
-    width: calc(50% - 50px);
-    text-align: right;
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
-
-#accomplishments .timeline .accomplishment.right {
-    text-align: left;
-    margin-left: calc(50% + 50px);
-}
-
-@media screen and (max-width: 600px) {
-
-    #accomplishments .timeline .line {
-        display: none;
+                &.c {
+                    color: #a2ff94;
+                }
+            }
+        }
     }
 
-    #accomplishments .timeline .accomplishment {
+    .timeline {
+        position: relative;
         width: 100%;
-        text-align: center;
-        margin-top: 100px;
-        margin-bottom: 100px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        margin-top: 65px;
+
+        .line {
+            position: absolute;
+            width: 5px;
+            height: 100%;
+            background-color: #a2ff94;
+            @include center;
+        }
+
+        .accomplishment {
+            width: calc(50% - 50px);
+            text-align: right;
+            margin-top: 100px;
+            margin-bottom: 100px;
+
+            &.right {
+                text-align: left;
+                margin-left: calc(50% + 50px);
+            }
+
+            .date {
+                color: white;
+                font-family: "Liberation";
+                font-size: 30px;
+            }
+
+            .info {
+                color: white;
+                font-family: "Hermit Light";
+                font-size: 20px;
+                font-weight: normal;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                    background-image: linear-gradient(#00000000 65%, #a2ff947e 65%);
+                }
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+
+            .line {
+                display: none;
+            }
+
+            .accomplishment {
+                width: 100%;
+                text-align: center;
+                margin-top: 100px;
+                margin-bottom: 100px;
+
+                &.right {
+                    text-align: center;
+                    margin-left: 0px;
+                }
+            }
+        }
     }
-
-    #accomplishments .timeline .accomplishment.right {
-        text-align: center;
-        margin-left: 0px;
-    }
-
-}
-
-#accomplishments .timeline .accomplishment .date {
-    color: white;
-    font-family: "Liberation";
-    font-size: 30px;
-}
-
-#accomplishments .timeline .accomplishment .info {
-    color: white;
-    font-family: "Hermit Light";
-    font-size: 20px;
-    font-weight: normal;
-}
-
-#accomplishments .timeline .accomplishment .info a {
-    color: white;
-    text-decoration: none;
-    background-image: linear-gradient(#00000000 65%, #a2ff947e 65%);
 }

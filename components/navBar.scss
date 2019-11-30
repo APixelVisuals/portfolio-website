@@ -1,158 +1,164 @@
 @import "../global";
 
-#nav-bar .home-button {
-    display: inline-block;
-    position: fixed;
-    margin-top: 25px;
-    margin-left: 25px;
-    z-index: 100;
-}
+#nav-bar {
+    .home-button {
+        display: inline-block;
+        position: fixed;
+        margin-top: 25px;
+        margin-left: 25px;
+        z-index: 100;
 
-#nav-bar .home-button img {
-    width: 50px;
-    height: auto;
-}
+        img {
+            width: 50px;
+            height: auto;
 
-#nav-bar .home-button.forceGif img {
-    content: url("/static/apixel-gif.gif");
-}
+            &:hover {
+                content: url("/static/apixel-gif.gif");
+            }
+        }
 
-#nav-bar .home-button img:hover {
-    content: url("/static/apixel-gif.gif");
-}
-
-#nav-bar .lol-mode-button {
-    position: fixed;
-    top: -5px;
-    right: 0px;
-    color: white;
-    font-family: "Hermit Light";
-    font-size: 10px;
-    cursor: pointer;
-    user-select: none;
-}
-
-#nav-bar .bar {
-    display: inline-block;
-    position: fixed;
-    white-space: nowrap;
-    bottom: 25px;
-    @include center;
-    z-index: 100;
-}
-
-#nav-bar .bar.mobile {
-    display: none;
-}
-
-@media screen and (max-width: 600px) {
-    #nav-bar .bar {
-        display: none;
+        &.forceGif {
+            img {
+                content: url("/static/apixel-gif.gif");
+            }
+        }
     }
 
-    #nav-bar .bar.mobile {
-        display: block;
+    .lol-mode-button {
+        position: fixed;
+        top: -5px;
+        right: 0px;
+        color: white;
+        font-family: "Hermit Light";
+        font-size: 10px;
+        cursor: pointer;
+        user-select: none;
     }
-}
 
-#nav-bar .side-bar {
-    display: inline-block;
-    position: fixed;
-    white-space: nowrap;
-    top: 50vh;
-    left: 0px;
-    transform: translate(calc(-50% + 25px), 0) rotate(-90deg);
-    z-index: 100;
-}
+    .bar {
+        display: inline-block;
+        position: fixed;
+        white-space: nowrap;
+        bottom: 25px;
+        @include center;
+        z-index: 100;
 
-#nav-bar .button {
-    display: inline-block;
-    color: white;
-    font-family: "Liberation";
-    font-size: 15px;
-    text-decoration: none;
-    border-bottom: 1px white solid;
-    margin: 15px;
-    cursor: pointer;
-}
+        &.mobile {
+            display: none;
+        }
+    }
 
-#nav-bar .button:not([href]):not(.menu-button) {
-    cursor: default;
-}
+    @media screen and (max-width: 600px) {
+        .bar {
+            display: none;
 
-#nav-bar .button:hover {
-    color: #a2ff94;
-    border-bottom-color: #a2ff94;
-}
+            &.mobile {
+                display: block;
+            }
+        }
+    }
 
-#nav-bar .social-tag {
-    position: fixed;
-    left: 50px;
-    padding: 15px 35px 10px;
-    background-color: #292929;
-    border: 2px #1b1b1b solid;
-    border-radius: 100px;
-    opacity: 0;
-    transition: opacity 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    pointer-events: none;
-    user-select: none;
-    z-index: 100;
-}
+    .side-bar {
+        display: inline-block;
+        position: fixed;
+        white-space: nowrap;
+        top: 50vh;
+        left: 0px;
+        transform: translate(calc(-50% + 25px), 0) rotate(-90deg);
+        z-index: 100;
+    }
 
-#nav-bar .social-tag h1 {
-    color: white;
-    font-family: "Liberation";
-    font-size: 15px;
-    margin: auto;
-}
+    .button {
+        display: inline-block;
+        color: white;
+        font-family: "Liberation";
+        font-size: 15px;
+        text-decoration: none;
+        border-bottom: 1px white solid;
+        margin: 15px;
+        cursor: pointer;
 
-#nav-bar .menu {
-    position: fixed;
-    width: 100%;
-    background-color: #292929;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    bottom: 0px;
-    transform: translate(0, 100%);
-    transition: 1s cubic-bezier(0.215, 0.610, 0.355, 1);
-    z-index: 101;
-}
+        &:not([href]):not(.menu-button) {
+            cursor: default;
+        }
 
-#nav-bar .menu.open {
-    transform: none;
-}
+        &:hover {
+            color: #a2ff94;
+            border-bottom-color: #a2ff94;
+        }
+    }
 
-#nav-bar .menu .menu-button {
-    display: inline-block;
-    color: white;
-    font-family: "Liberation";
-    font-size: 20px;
-    text-decoration: none;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    @include center;
-}
+    .social-tag {
+        position: fixed;
+        left: 50px;
+        padding: 15px 35px 10px;
+        background-color: #292929;
+        border: 2px #1b1b1b solid;
+        border-radius: 100px;
+        opacity: 0;
+        transition: opacity 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        pointer-events: none;
+        user-select: none;
+        z-index: 100;
 
-#nav-bar .menu .menu-button::before {
-    display: inline-block;
-    position: absolute;
-    width: 0px;
-    height: 1.5px;
-    background-color: #a2ff94;
-    margin-top: 22px;
-    content: "";
-    transition: 0.5s cubic-bezier(0.23, 1, 0.320, 1);
-}
+        h1 {
+            color: white;
+            font-family: "Liberation";
+            font-size: 15px;
+            margin: auto;
+        }
+    }
 
-#nav-bar .menu .menu-button:hover::before {
-    width: 100%;
-}
+    .menu {
+        position: fixed;
+        width: 100%;
+        background-color: #292929;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        bottom: 0px;
+        transform: translate(0, 100%);
+        transition: 1s cubic-bezier(0.215, 0.610, 0.355, 1);
+        z-index: 101;
 
-#nav-bar .menu .menu-close-button {
-    position: absolute;
-    right: 20px;
-    color: white;
-    font-family: "Liberation";
-    font-size: 20px;
-    cursor: pointer;
+        &.open {
+            transform: none;
+        }
+
+        .menu-button {
+            display: inline-block;
+            color: white;
+            font-family: "Liberation";
+            font-size: 20px;
+            text-decoration: none;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            @include center;
+
+            &::before {
+                display: inline-block;
+                position: absolute;
+                width: 0px;
+                height: 1.5px;
+                background-color: #a2ff94;
+                margin-top: 22px;
+                content: "";
+                transition: 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+            }
+
+            &:hover {
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .menu-close-button {
+            position: absolute;
+            right: 20px;
+            color: white;
+            font-family: "Liberation";
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
 }

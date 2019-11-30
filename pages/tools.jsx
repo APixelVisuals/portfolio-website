@@ -2,7 +2,6 @@ import React from "react";
 import Head from "../components/Head";
 import NavBar from "../components/NavBar";
 import updateTitles from "../static/updateTitles";
-import "../global.scss";
 import "./tools.scss";
 
 export default class Tools extends React.Component {

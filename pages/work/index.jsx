@@ -2,7 +2,6 @@ import React from "react";
 import Head from "../../components/Head";
 import NavBar from "../../components/NavBar";
 import updateTitles from "../../static/updateTitles";
-import "../../global.scss";
 import "./index.scss";
 
 export default class Work extends React.Component {

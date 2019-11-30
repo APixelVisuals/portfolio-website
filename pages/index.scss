@@ -1,55 +1,57 @@
+//Import modules
 @import "../global";
 
-#index .title-wrapper {
+.title-wrapper {
     width: 100%;
     height: 100vh;
+
+    .title {
+        display: inline-block;
+        margin-top: 25vh;
+        @include center;
+    }
 }
 
-#index .title {
-    display: inline-block;
-    margin-top: 25vh;
-    margin-left: 50%;
-    transform: translate(-50%, 0);
-}
-
-#index .title .text {
+.text {
     color: white;
     font-family: "Liberation";
     font-size: 50px;
     margin: auto;
+
+    span {
+        &.a {
+            border-bottom: 5px #a2ff94 solid;
+        }
+
+        &.b {
+            background-color: #a2ff941c;
+        }
+
+        &.c {
+            color: #a2ff94;
+        }
+    }
+
+    &.two {
+        margin-top: 15px;
+        margin-left: 65px;
+    }
 }
 
-#index .text span.a {
-    border-bottom: 5px #a2ff94 solid;
-}
-
-#index .text span.b {
-    background-color: #a2ff941c;
-}
-
-#index .text span.c {
-    color: #a2ff94;
-}
-
-#index .title .text.two {
-    margin-top: 15px;
-    margin-left: 65px;
-}
-
-#index .arrows {
+.arrows {
     display: inline-block;
     color: white;
     font-family: "Times New Roman";
     font-size: 20px;
     word-spacing: 10px;
-    margin-left: 50%;
+    @include center;
     transform: translate(-50%, 0) rotate(180deg);
     animation: arrows 1s infinite;
     user-select: none;
-}
 
-#index .arrows.fast {
-    animation-duration: 0.01s;
+    &.fast {
+        animation-duration: 0.01s;
+    }
 }
 
 @keyframes arrows {
@@ -57,198 +59,188 @@
         margin-top: 50px;
         opacity: 1;
     }
+
     100% {
         margin-top: 65px;
         opacity: 0;
     }
 }
 
-#index .skill-set-title {
+.skill-set-title {
     display: inline-block;
     word-spacing: -15px;
     margin-top: 35px;
     margin-bottom: 65px;
-    margin-left: 50%;
-    transform: translate(-50%, 0);
+    @include center;
+
+    .text {
+        margin-left: 30px;
+
+        &.two {
+            margin-top: 15px;
+            margin-left: 0px;
+        }
+    }
 }
 
-#index .skill-set-title .text {
-    color: white;
-    font-family: "Liberation";
-    font-size: 50px;
-    margin: auto;
-    margin-left: 30px;
-}
-
-#index .skill-set-title .text.two {
-    margin-top: 15px;
-    margin-left: 0px;
-}
-
-#index .skill-set {
+.skill-set {
     display: flex;
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
+
+    .skill {
+        width: 350px;
+        margin: 35px;
+
+        .name {
+            display: inline-block;
+            color: white;
+            font-family: "Liberation";
+            font-size: 15px;
+            border-radius: 100px;
+            padding: 8px 20px 3px;
+            @include center;
+            user-select: none;
+
+            &.javascript {
+                color: black;
+                background-color: #f7e018;
+            }
+
+            &.html-css {
+                background-color: #f26525;
+            }
+
+            &.react {
+                color: black;
+                background-color: #60dbfb;
+            }
+
+            &.mongodb {
+                background-color: #53ab4d;
+            }
+
+            &.mysql {
+                background-color: #4479a1;
+            }
+
+            &.git {
+                background-color: #f34f29;
+            }
+
+            &.linux {
+                background-color: #000000;
+            }
+
+            &.bash-scripting {
+                background-color: #444444;
+            }
+        }
+
+        .info {
+            display: inline-block;
+            color: white;
+            font-family: "Hermit Light";
+            font-size: 15px;
+            text-align: center;
+            font-weight: normal;
+
+            a {
+                color: white;
+                text-decoration: none;
+                background-image: linear-gradient(#00000000 65%, #a2ff947e 65%);
+            }
+        }
+    }
 }
 
-#index .skill-set .skill {
-    width: 350px;
-    margin: 35px;
-}
-
-#index .skill-set .skill .name {
-    display: inline-block;
-    color: white;
-    font-family: "Liberation";
-    font-size: 15px;
-    border-radius: 100px;
-    padding: 8px 20px 3px;
-    margin-left: 50%;
-    transform: translate(-50%, 0);
-    user-select: none;
-}
-
-#index .skill-set .skill .name.javascript {
-    color: black;
-    background-color: #f7e018;
-}
-
-#index .skill-set .skill .name.html-css {
-    background-color: #f26525;
-}
-
-#index .skill-set .skill .name.react {
-    color: black;
-    background-color: #60dbfb;
-}
-
-#index .skill-set .skill .name.mongodb {
-    background-color: #53ab4d;
-}
-
-#index .skill-set .skill .name.mysql {
-    background-color: #4479a1;
-}
-
-#index .skill-set .skill .name.git {
-    background-color: #f34f29;
-}
-
-#index .skill-set .skill .name.linux {
-    background-color: #000000;
-}
-
-#index .skill-set .skill .name.bash-scripting {
-    background-color: #444444;
-}
-
-#index .skill-set .skill .info {
-    display: inline-block;
-    color: white;
-    font-family: "Hermit Light";
-    font-size: 15px;
-    text-align: center;
-    font-weight: normal;
-}
-
-#index .skill-set .skill .info a {
-    color: white;
-    text-decoration: none;
-    background-image: linear-gradient(#00000000 65%, #a2ff947e 65%);
-}
-
-#index .work-title {
+.work-title {
     display: inline-block;
     word-spacing: -15px;
     margin-top: 100px;
     margin-bottom: 35px;
-    margin-left: 50%;
-    transform: translate(-50%, 0);
-}
+    @include center;
 
-#index .work-title .text {
-    color: white;
-    font-family: "Liberation";
-    font-size: 50px;
-    margin: auto;
-    margin-right: 30px;
-}
+    .text {
+        margin-right: 30px;
 
-#index .work-title .text.two {
-    margin-top: 15px;
-    margin-left: 30px;
-}
-
-#index .work-wrapper {
-    width: calc(100% - 250px);
-    margin-left: 50%;
-    transform: translate(-50%, 0);
-}
-
-@media screen and (max-width: 900px) {
-    #index .work-wrapper {
-        width: calc(100% - 100px);
+        &.two {
+            margin-top: 15px;
+            margin-left: 30px;
+        }
     }
 }
 
-#index .work-wrapper .work {
-    width: 100%;
-    margin-top: 65px;
-    margin-bottom: 65px;
+.work-wrapper {
+    padding: 0px 125px;
+
+    .work {
+        width: 100%;
+        margin-top: 65px;
+        margin-bottom: 65px;
+
+        .name {
+            display: inline-block;
+            position: relative;
+            font-family: "Liberation";
+            font-size: 40px;
+            font-weight: bold;
+            text-decoration: none;
+            margin: auto;
+
+            &.geola {
+                color: #10fbcd;
+
+                &::before {
+                    background-color: #10fbcd;
+                }
+            }
+
+            &.apixel-visuals {
+                color: #a2ff94;
+
+                &::before {
+                    background-color: #a2ff94;
+                }
+            }
+
+            &.kogit {
+                color: #ffdc48;
+
+                &::before {
+                    background-color: #ffdc48;
+                }
+            }
+
+            &::before {
+                display: inline-block;
+                position: absolute;
+                width: 0px;
+                height: 4px;
+                margin-top: 45px;
+                content: "";
+                transition: 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+            }
+
+            &:hover {
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .info {
+            color: white;
+            font-family: "Hermit Light";
+            font-size: 20px;
+            font-weight: normal;
+        }
+    }
 }
 
-#index .work-wrapper .work .name {
-    display: inline-block;
-    position: relative;
-    font-family: "Liberation";
-    font-size: 40px;
-    font-weight: bold;
-    text-decoration: none;
-    margin: auto;
-}
-
-#index .work-wrapper .work .name::before {
-    display: inline-block;
-    position: absolute;
-    width: 0px;
-    height: 4px;
-    margin-top: 45px;
-    content: "";
-    transition: 0.5s cubic-bezier(0.23, 1, 0.320, 1);
-}
-
-#index .work-wrapper .work .name:hover::before {
-    width: 100%;
-}
-
-#index .work-wrapper .work .name.geola {
-    color: #10fbcd;
-}
-
-#index .work-wrapper .work .name.geola::before {
-    background-color: #10fbcd;
-}
-
-#index .work-wrapper .work .name.apixel-visuals {
-    color: #a2ff94;
-}
-
-#index .work-wrapper .work .name.apixel-visuals::before {
-    background-color: #a2ff94;
-}
-
-#index .work-wrapper .work .name.kogit {
-    color: #ffdc48;
-}
-
-#index .work-wrapper .work .name.kogit::before {
-    background-color: #ffdc48;
-}
-
-#index .work-wrapper .work .info {
-    color: white;
-    font-family: "Hermit Light";
-    font-size: 20px;
-    font-weight: normal;
+@media screen and (max-width: 900px) {
+    .work-wrapper {
+        padding: 0px 50px;
+    }
 }

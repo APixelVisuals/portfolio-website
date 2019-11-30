@@ -1,64 +1,63 @@
 @import "../../global";
 
-#work_geola .top-margin {
-    display: inline-block;
-    margin-bottom: 165px;
-}
+#work_geola {
+    .title {
+        display: inline-block;
+        margin-top: 135px;
+        margin-bottom: 20px;
 
-#work_geola .title {
-    display: inline-block;
-    margin-top: 85px;
-    margin-bottom: 20px;
-}
+        .text {
+            color: white;
+            font-family: "Liberation";
+            font-size: 50px;
+            margin: auto;
 
-#work_geola .title .text {
-    color: white;
-    font-family: "Liberation";
-    font-size: 50px;
-    margin: auto;
-}
+            span {
+                &.a {
+                    border-bottom: 5px #a2ff94 solid;
+                }
 
-#work_geola .text span.a {
-    border-bottom: 5px #10fbcd solid;
-}
+                &.b {
+                    background-color: #a2ff941c;
+                }
 
-#work_geola .text span.b {
-    background-color: #10fbcd1c;
-}
+                &.c {
+                    color: #a2ff94;
+                }
+            }
+        }
+    }
 
-#work_geola .text span.c {
-    color: #10fbcd;
-}
+    .info {
+        display: inline-block;
+        color: white;
+        font-family: "Hermit Light";
+        font-size: 20px;
+        font-weight: normal;
 
-#work_geola .info {
-    display: inline-block;
-    color: white;
-    font-family: "Hermit Light";
-    font-size: 20px;
-    font-weight: normal;
-}
+        span {
+            color: #a2ff94;
+        }
 
-#work_geola .info span {
-    color: #10fbcd;
-}
+        a {
+            color: white;
+            text-decoration: none;
+            background-image: linear-gradient(#00000000 65%, #a2ff947e 65%);
+        }
+    }
 
-#work_geola .info a {
-    color: white;
-    text-decoration: none;
-    background-image: linear-gradient(#00000000 65%, #10fbcd7e 65%);
-}
-
-#work_geola .project-link-button {
-    display: inline-block;
-    color: white;
-    font-family: "Liberation";
-    font-size: 25px;
-    text-decoration: none;
-    background-image: linear-gradient(#00000000 53%, #10fbcd7e 53%);
-    border-bottom: 3px #10fbcda8 solid;
-    border-radius: 100px;
-    padding: 5px;
-    margin-top: 35px;
-    margin-bottom: 35px;
-    @include center;
+    .project-link-button {
+        display: inline-block;
+        color: white;
+        font-family: "Liberation";
+        font-size: 25px;
+        text-decoration: none;
+        background-image: linear-gradient(#00000000 53%, #10fbcd7e 53%);
+        border-bottom: 3px #10fbcda8 solid;
+        border-radius: 100px;
+        padding: 5px;
+        margin-top: 35px;
+        margin-bottom: 35px;
+        @include center;
+    }
 }

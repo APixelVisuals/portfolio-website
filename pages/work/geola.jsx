@@ -27,8 +27,6 @@ export default class Geola extends React.Component {
 
                 <div id="content">
 
-                    <div className="top-margin" />
-
                     <div className="title">
                         <h1 className="text">{"Geola".split("").map((l, i) => <span className={this.state.titles.geola[i]}>{l}</span>)}</h1>
                     </div>

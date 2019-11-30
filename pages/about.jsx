@@ -17,7 +17,7 @@ export default class About extends React.Component {
 
     render = () => {
         return (
-            <div id="about">
+            <div>
 
                 <Head
                     title="About - APixel Visuals"
@@ -26,8 +26,6 @@ export default class About extends React.Component {
                 <NavBar lolMode={this.state.lolMode} toggleLolMode={this.toggleLolMode} />
 
                 <div id="content">
-
-                    <div className="top-margin" />
 
                     <div className="title">
                         <h1 className="text">{"APixel Visuals".split("").map((l, i) => <span className={this.state.titles.apixelVisuals[i]}>{l}</span>)}</h1>

@@ -27,8 +27,6 @@ export default class Tools extends React.Component {
 
                 <div id="content">
 
-                    <div className="top-margin" />
-
                     <div className="title">
                         <h1 className="text">{"My Tools".split("").map((l, i) => <span className={this.state.titles.myTools[i]}>{l}</span>)}</h1>
                     </div>

@@ -21,7 +21,7 @@ export default class APixelVisuals extends React.Component {
 
                 <Head
                     title="My Website - Work - APixel Visuals"
-                    description={`Information about my website, as a project`}
+                    description="Information about my website, as a project"
                 />
                 <NavBar lolMode={this.state.lolMode} toggleLolMode={this.toggleLolMode} />
 

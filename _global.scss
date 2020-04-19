@@ -1,0 +1,36 @@
+//Fonts
+@font-face {
+    font-family: "Nimbus Sans";
+    src: url(/assets/nimbus-sans.otf);
+}
+
+@font-face {
+    font-family: "Passion One";
+    src: url(/assets/passion-one.otf);
+}
+
+//Mixins
+@mixin center {
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+}
+
+//HTML and body
+html {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0px;
+}
+
+//Scrollbar
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #373e40;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+}

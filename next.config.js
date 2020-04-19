@@ -9,5 +9,8 @@ module.exports = nextSASS({
         };
 
         return config;
+    },
+    devIndicators: {
+        autoPrerender: false
     }
 });

@@ -1,0 +1,253 @@
+@import "../global";
+
+#nav-bar {
+    .nav-bar-wrapper {
+        position: fixed;
+        display: flex;
+        width: 100px;
+        height: 100vh;
+        top: 0px;
+        left: 0px;
+        flex-wrap: nowrap;
+        border-right: 2px white solid;
+        z-index: 100;
+        transition: 1s;
+
+        @media screen and (max-width: 1000px) {
+            width: 100%;
+            height: 100px;
+            flex-direction: column;
+        }
+
+        &.menu {
+            width: 100%;
+            background-color: black;
+            box-shadow: 100px 0px 0px 0px white;
+
+            @media screen and (max-width: 1000px) {
+                height: 100vh;
+                box-shadow: 0px 100px 0px 0px white;
+            }
+        }
+
+        .bar {
+            display: flex;
+            min-width: 100px;
+            height: 100%;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-right: 2px white solid;
+
+            @media screen and (max-width: 1000px) {
+                min-width: 100%;
+                min-height: 100px;
+                max-height: 100px;
+                border-bottom: 2px white solid;
+                border-right: none;
+            }
+
+            .menu-button {
+                width: 35px;
+                margin-top: 35px;
+                cursor: pointer;
+
+                @media screen and (max-width: 1000px) {
+                    margin-bottom: 35px;
+                }
+
+                .line {
+                    width: 100%;
+                    height: 2px;
+                    background-color: white;
+                    transition: 0.5s;
+
+                    &.line-1 {
+                        &.cross {
+                            transform: translateY(12px) rotate(45deg);
+                        }
+                    }
+
+                    &.line-2 {
+                        margin-top: 10px;
+                        @include center;
+
+                        &.cross {
+                            width: 0px;
+                        }
+                    }
+
+                    &.line-3 {
+                        margin-top: 10px;
+
+                        &.cross {
+                            transform: translateY(-12px) rotate(-45deg);
+                        }
+                    }
+                }
+            }
+        }
+
+        .links {
+            display: flex;
+            width: 100%;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: auto 0px;
+
+            &.menu {
+                display: none;
+            }
+
+            @media screen and (max-width: 1000px) {
+                display: none;
+                flex-direction: row;
+                border-bottom: 2px white solid;
+                padding: 35px 0px;
+                margin: 0px;
+
+                &.menu {
+                    display: flex;
+                }
+            }
+
+            .link {
+                width: 35px;
+                height: 35px;
+                margin: 35px 0px;
+                cursor: pointer;
+
+                @media screen and (max-width: 1000px) {
+                    margin: 0px 25px;
+                }
+
+                &:hover {
+                    &.twitter path {
+                        fill: #1da1f2;
+                    }
+
+                    &.github path {
+                        fill: #9e9e9e;
+                    }
+
+                    &.discord path {
+                        fill: #7289da;
+                    }
+
+                    &.email path {
+                        fill: #f14336;
+                    }
+                }
+            }
+        }
+
+        .menu-content {
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            animation: 1s menuItems 1s forwards;
+
+            @keyframes menuItems {
+                0% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            @media screen and (max-width: 1000px) {
+                height: calc(100% - 100px);
+            }
+
+            .menu-items {
+                position: relative;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                flex-wrap: wrap;
+
+                @media screen and (max-width: 1000px) {
+                    height: calc(100% - 107px);
+                }
+
+                .menu-item-background-wrapper {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0px;
+                    left: 0px;
+                    overflow: hidden;
+                    z-index: -10;
+
+                    .menu-item-background {
+                        min-width: 100%;
+                        min-height: 100%;
+                    }
+                }
+
+                .menu-item-link {
+                    width: 50%;
+                    height: 50%;
+                    text-decoration: none;
+
+                    @media screen and (max-width: 1000px) {
+                        width: 100%;
+                        height: 25%;
+                    }
+
+                    .menu-item {
+                        position: relative;
+                        display: flex;
+                        width: 100%;
+                        height: 100%;
+                        flex-wrap: nowrap;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: black;
+                        transition: 0.25s ease-out;
+
+                        .menu-item-text {
+                            position: relative;
+                            color: white;
+                            font-family: "Gilmer Heavy";
+                            font-size: 65px;
+                            border-bottom: 0px white solid;
+                            transition: 0.5s ease-out;
+
+                            &::before {
+                                position: absolute;
+                                display: inline-block;
+                                width: 0px;
+                                height: 5px;
+                                background-color: white;
+                                margin-top: 85px;
+                                content: "";
+                                transition: 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        .menu-item {
+                            background-color: transparent;
+                        }
+
+                        .menu-item-text {
+                            padding-top: 35px;
+                            padding-bottom: 5px;
+
+                            &::before {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

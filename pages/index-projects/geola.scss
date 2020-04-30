@@ -1,0 +1,274 @@
+@import "../global";
+
+.project.geola {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(#00221c, #000000);
+
+    .design {
+        position: absolute;
+        width: 40%;
+        min-width: 350px;
+        height: auto;
+        top: 40%;
+        right: 10%;
+        transform: translate(0, -50%);
+        user-select: none;
+        pointer-events: none;
+
+        svg path, svg g, svg circle {
+            transition: 0.5s ease-out;
+
+            &#circle_middle, &#circle_right {
+                transform-origin: 295px 375px;
+            }
+
+            &#striped_circle {
+                transform-origin: 85px 373px;
+            }
+        }
+
+        &.view-button-hovered {
+            #circle_middle, #circle_right {
+                transform: rotate(-5.5deg);
+            }
+
+            #dots {
+                circle:nth-child(1), circle:nth-child(10) {
+                    animation: dots 3s infinite;
+
+                    @keyframes dots {
+                        0%, 16% {
+                            fill: #006b56;
+                        }
+
+                        8% {
+                            fill: #00c9a1;
+                        }
+                    }
+                }
+
+                circle:nth-child(3), circle:nth-child(6) {
+                    animation: dots2 3s infinite;
+
+                    @keyframes dots2 {
+                        0%, 16% {
+                            fill: #005645;
+                        }
+
+                        8% {
+                            fill: #009779;
+                        }
+                    }
+                }
+
+                circle:nth-child(2), circle:nth-child(15) {
+                    animation: dots3 3s 0.5s infinite;
+
+                    @keyframes dots3 {
+                        0%, 16% {
+                            fill: #007a63;
+                        }
+
+                        8% {
+                            fill: #00ffcc;
+                        }
+                    }
+                }
+
+                circle:nth-child(4), circle:nth-child(11) {
+                    animation: dots4 3s 0.5s infinite;
+
+                    @keyframes dots4 {
+                        0%, 16% {
+                            fill: #00604e;
+                        }
+
+                        8% {
+                            fill: #00ac89;
+                        }
+                    }
+                }
+
+                circle:nth-child(7) {
+                    animation: dots5 3s 0.5s infinite;
+
+                    @keyframes dots5 {
+                        0%, 16% {
+                            fill: #004c3d;
+                        }
+
+                        8% {
+                            fill: #007e65;
+                        }
+                    }
+                }
+
+                circle:nth-child(5), circle:nth-child(16) {
+                    animation: dots6 3s 1s infinite;
+
+                    @keyframes dots6 {
+                        0%, 16% {
+                            fill: #006b56;
+                        }
+
+                        8% {
+                            fill: #00c9a1;
+                        }
+                    }
+                }
+
+                circle:nth-child(8), circle:nth-child(12) {
+                    animation: dots7 3s 1s infinite;
+
+                    @keyframes dots7 {
+                        0%, 16% {
+                            fill: #005645;
+                        }
+
+                        8% {
+                            fill: #009779;
+                        }
+                    }
+                }
+
+                circle:nth-child(9), circle:nth-child(17) {
+                    animation: dots8 3s 1.5s infinite;
+
+                    @keyframes dots8 {
+                        0%, 16% {
+                            fill: #006b56;
+                        }
+
+                        8% {
+                            fill: #00c9a1;
+                        }
+                    }
+                }
+
+                circle:nth-child(13) {
+                    animation: dots9 3s 1.5s infinite;
+
+                    @keyframes dots9 {
+                        0%, 16% {
+                            fill: #00604e;
+                        }
+
+                        8% {
+                            fill: #00ac89;
+                        }
+                    }
+                }
+
+                circle:nth-child(18), circle:nth-child(14) {
+                    animation: dots10 3s 2s infinite;
+
+                    @keyframes dots10 {
+                        0%, 16% {
+                            fill: #006b56;
+                        }
+
+                        8% {
+                            fill: #00c9a1;
+                        }
+                    }
+                }
+
+                circle:nth-child(19) {
+                    animation: dots11 3s 2.5s infinite;
+
+                    @keyframes dots11 {
+                        0%, 16% {
+                            fill: #007a63;
+                        }
+
+                        8% {
+                            fill: #00ffcc;
+                        }
+                    }
+                }
+            }
+
+            #striped_circle {
+                transform: rotate(-45deg);
+            }
+
+            #left_circle {
+                transform: translateY(20px);
+            }
+        }
+    }
+
+    .name {
+        display: inline-flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50vh;
+        margin-left: 10%;
+        transform: translate(0, -50%);
+
+        @media screen and (max-width: 1000px) {
+            margin-left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .text {
+            color: white;
+            font-family: "Gilmer Heavy";
+            font-size: 25vh;
+            margin: 0px;
+
+            @media screen and (max-width: 1000px) {
+                font-size: 25vw;
+            }
+        }
+
+        .view-button-link {
+            text-decoration: none;
+            margin-left: auto;
+            margin-right: 65px;
+            transition: 0.5s ease-out;
+
+            @media screen and (max-width: 1000px) {
+                margin-left: 0px;
+                margin-right: auto;
+            }
+
+            &:hover {
+                margin-right: 35px;
+
+                @media screen and (max-width: 1000px) {
+                    margin-left: 15px;
+                    margin-right: auto;
+                }
+            }
+
+            .view-button {
+                display: flex;
+                flex-wrap: nowrap;
+                align-items: center;
+
+                .view-button-text {
+                    display: inline-block;
+                    color: #10fbcd;
+                    font-family: "Nimbus Sans";
+                    font-size: 35px;
+                    white-space: nowrap;
+                    margin: 0px;
+                }
+
+                .arrow {
+                    width: 100px;
+                    height: auto;
+                    margin-left: 35px;
+
+                    svg rect {
+                        fill: #10fbcd;
+                    }
+                }
+            }
+        }
+    }
+}

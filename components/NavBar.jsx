@@ -15,6 +15,8 @@ export default class NavBar extends React.Component {
 
                 <div className={`nav-bar-wrapper ${this.state.menuOpen && "menu"}`}>
 
+                    <div className={`nav-bar-background ${this.props.background && "displayed"}`} style={{ backgroundColor: this.props.backgroundColor }} />
+
                     <div className="bar">
 
                         <div className="menu-button" onClick={() => this.setState({ menuOpen: !this.state.menuOpen })}>
@@ -48,7 +50,7 @@ export default class NavBar extends React.Component {
                                     <video className="menu-item-background" src="/assets/background.mp4" autoPlay loop />
                                 </div>
 
-                                <a href="/work" className="menu-item-link"><div className="menu-item">
+                                <a href="/" className="menu-item-link"><div className="menu-item">
                                     <p className="menu-item-text">Work</p>
                                 </div></a>
                                 <a href="https://blog.apixel.me" className="menu-item-link"><div className="menu-item">

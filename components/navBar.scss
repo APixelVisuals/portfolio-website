@@ -30,6 +30,32 @@
             }
         }
 
+        .nav-bar-background {
+            position: absolute;
+            min-width: 100px;
+            height: 100%;
+            top: 0px;
+            left: -100px;
+            z-index: -5;
+            transition: 1s left cubic-bezier(0.075, 0.82, 0.165, 1);
+
+            @media screen and (max-width: 1000px) {
+                min-width: 100%;
+                height: 100px;
+                top: -100px;
+                left: 0px;
+                transition: 1s top cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+
+            &.displayed {
+                left: 0px;
+
+                @media screen and (max-width: 1000px) {
+                    top: 0px;
+                }
+            }
+        }
+
         .bar {
             display: flex;
             min-width: 100px;

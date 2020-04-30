@@ -28,8 +28,8 @@ export default class NavBar extends React.Component {
                         <div className="links">
                             <a href="/twitter" className="link twitter"><InlineSVG src="/assets/twitter.svg" /></a>
                             <a href="/github" className="link github"><InlineSVG src="/assets/github.svg" /></a>
-                            <div className="link discord"><InlineSVG src="/assets/discord.svg" /></div>
-                            <div className="link email"><InlineSVG src="/assets/envelope.svg" /></div>
+                            <a href="/discord" className="link discord"><InlineSVG src="/assets/discord.svg" /></a>
+                            <a href="/contact" className="link contact"><InlineSVG src="/assets/envelope.svg" /></a>
                         </div>
 
                     </div>

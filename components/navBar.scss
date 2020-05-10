@@ -9,7 +9,6 @@
         top: 0px;
         left: 0px;
         flex-wrap: nowrap;
-        border-right: 2px white solid;
         z-index: 100;
         transition: 1s;
 
@@ -27,6 +26,10 @@
             @media screen and (max-width: 1000px) {
                 height: 100vh;
                 box-shadow: 0px 100px 0px 0px white;
+
+                @media screen and (max-width: 1000px) {
+                    width: 100%;
+                }
             }
         }
 
@@ -65,6 +68,11 @@
             justify-content: center;
             align-items: center;
             border-right: 2px white solid;
+            transition: 0.5s;
+
+            &:hover {
+                min-width: 135px;
+            }
 
             @media screen and (max-width: 1000px) {
                 min-width: 100%;
@@ -72,6 +80,11 @@
                 max-height: 100px;
                 border-bottom: 2px white solid;
                 border-right: none;
+
+                &:hover {
+                    min-height: 135px;
+                    max-height: 135px;
+                }
             }
 
             .menu-button {
@@ -171,8 +184,10 @@
         }
 
         .menu-content {
+            display: flex;
             width: 100%;
-            height: 100%;
+            flex-wrap: nowrap;
+            flex-grow: 1;
             opacity: 0;
             animation: 1s menuItems 1s forwards;
 
@@ -187,19 +202,15 @@
             }
 
             @media screen and (max-width: 1000px) {
-                height: calc(100% - 100px);
+                flex-direction: column;
             }
 
             .menu-items {
                 position: relative;
                 display: flex;
                 width: 100%;
-                height: 100%;
                 flex-wrap: wrap;
-
-                @media screen and (max-width: 1000px) {
-                    height: calc(100% - 107px);
-                }
+                flex-grow: 1;
 
                 .menu-item-background-wrapper {
                     position: absolute;
@@ -218,12 +229,10 @@
 
                 .menu-item-link {
                     width: 50%;
-                    height: 50%;
                     text-decoration: none;
 
                     @media screen and (max-width: 1000px) {
                         width: 100%;
-                        height: 25%;
                     }
 
                     .menu-item {
@@ -243,7 +252,12 @@
                             font-family: "Gilmer Heavy";
                             font-size: 65px;
                             border-bottom: 0px white solid;
+                            margin: 0px;
                             transition: 0.5s ease-out;
+
+                            @media screen and (max-width: 1000px) {
+                                font-size: 35px;
+                            }
 
                             &::before {
                                 position: absolute;
@@ -254,6 +268,10 @@
                                 margin-top: 85px;
                                 content: "";
                                 transition: 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+
+                                @media screen and (max-width: 1000px) {
+                                    margin-top: 50px;
+                                }
                             }
                         }
                     }
@@ -264,11 +282,16 @@
                         }
 
                         .menu-item-text {
-                            padding-top: 35px;
-                            padding-bottom: 5px;
+                            padding-top: 20px;
+                            margin-bottom: -20px;
 
                             &::before {
                                 width: 100%;
+                            }
+
+                            @media screen and (max-width: 1000px) {
+                                padding-top: 10px;
+                                margin-bottom: -10px;
                             }
                         }
                     }

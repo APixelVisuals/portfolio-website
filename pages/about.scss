@@ -1,0 +1,251 @@
+@import "../global";
+
+#about {
+    .background-wrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        overflow: hidden;
+        z-index: -10;
+
+        .video {
+            position: absolute;
+            min-width: 100%;
+            min-height: 100%;
+            top: 0px;
+            left: 0px;
+            filter: grayscale(1);
+        }
+
+        .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            opacity: 0;
+            transition: 1s;
+
+            &.enabled {
+                opacity: 1;
+            }
+
+            &.intro {
+                animation: bgIntro 10s infinite;
+
+                @keyframes bgIntro {
+                    0%, 100% {
+                        background-color: #24176dbb;
+                    }
+
+                    50% {
+                        background-color: #371a7abb;
+                    }
+                }
+            }
+
+            &.nodejs {
+                animation: bgNodejs 10s infinite;
+
+                @keyframes bgNodejs {
+                    0%, 100% {
+                        background-color: #16704bbb;
+                    }
+
+                    50% {
+                        background-color: #136156bb;
+                    }
+                }
+            }
+
+            &.web-development {
+                animation: bgWebDevelopment 10s infinite;
+
+                @keyframes bgWebDevelopment {
+                    0%, 100% {
+                        background-color: #1e569ebb;
+                    }
+
+                    50% {
+                        background-color: #477abdbb;
+                    }
+                }
+            }
+
+            &.databases {
+                animation: bgDatabases 10s infinite;
+
+                @keyframes bgDatabases {
+                    0%, 100% {
+                        background-color: #2a394dbb;
+                    }
+
+                    50% {
+                        background-color: #1c2633bb;
+                    }
+                }
+            }
+
+            &.miscellaneous-skills {
+                animation: bgMiscellaneousSkills 10s infinite;
+
+                @keyframes bgMiscellaneousSkills {
+                    0%, 100% {
+                        background-color: #853729bb;
+                    }
+
+                    50% {
+                        background-color: #693720bb;
+                    }
+                }
+            }
+        }
+    }
+
+    .section {
+        width: 100%;
+        height: 100vh;
+
+        .avatar {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+            @include center;
+
+            @media screen and (max-width: 750px) {
+                width: 35vw;
+            }
+        }
+
+        .title {
+            display: inline-block;
+            color: white;
+            font-family: "Gilmer Heavy";
+            font-size: 85px;
+            white-space: nowrap;
+            @include center;
+
+            @media screen and (max-width: 750px) {
+                font-size: 10vw;
+            }
+        }
+
+        .description {
+            width: 80%;
+            color: white;
+            font-family: "Nimbus Sans";
+            font-size: 35px;
+            text-align: center;
+            @include center;
+
+            @media screen and (max-width: 750px) {
+                font-size: 25px;
+            }
+        }
+
+        .section-inner {
+            padding: 135px 0px;
+
+            .name {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center;
+
+                .icon {
+                    width: auto;
+                    height: 85px;
+                }
+
+                .name-text {
+                    color: white;
+                    font-family: "Gilmer Heavy";
+                    font-size: 65px;
+                    margin: 0px;
+                    margin-left: 35px;
+
+                    @media screen and (max-width: 750px) {
+                        font-size: 25px;
+                    }
+                }
+            }
+
+            .text {
+                width: 80%;
+                color: white;
+                font-family: "Nimbus Sans";
+                font-size: 35px;
+                text-align: center;
+                margin: auto;
+                margin-top: 65px;
+                @include center;
+
+                @media screen and (max-width: 750px) {
+                    font-size: 25px;
+                }
+
+                a {
+                    text-decoration: none;
+
+                    &.nodejs {
+                        animation: linkNodejs 10s infinite;
+
+                        @keyframes linkNodejs {
+                            0%, 100% {
+                                color: #24e494;
+                            }
+
+                            50% {
+                                color: #26ffd4;
+                            }
+                        }
+                    }
+
+                    &.web-development {
+                        animation: linkWebDevelopment 10s infinite;
+
+                        @keyframes linkWebDevelopment {
+                            0%, 100% {
+                                color: #61bdfb;
+                            }
+
+                            50% {
+                                color: #61dafb;
+                            }
+                        }
+                    }
+
+                    &.databases {
+                        animation: linkDatabases 10s infinite;
+
+                        @keyframes linkDatabases {
+                            0%, 100% {
+                                color: #6a83a5;
+                            }
+
+                            50% {
+                                color: #86a7d1;
+                            }
+                        }
+                    }
+
+                    &.miscellaneous-skills {
+                        animation: linkMiscellaneousSkills 10s infinite;
+
+                        @keyframes linkMiscellaneousSkills {
+                            0%, 100% {
+                                color: #ec6f59;
+                            }
+
+                            50% {
+                                color: #f0865d;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

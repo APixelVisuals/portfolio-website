@@ -53,6 +53,7 @@
         "background-color",
         "background-image",
         "opacity",
+        "filter",
         "border",
         "border-top",
         "border-bottom",

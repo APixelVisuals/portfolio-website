@@ -1,6 +1,21 @@
 @import "../global";
 
 #nav-bar {
+    .tooltip {
+        color: black;
+        font-family: "Nimbus Sans";
+        font-size: 18px;
+        background-color: white !important;
+        opacity: 1;
+        padding-top: 13px;
+        margin-top: -15px;
+        margin-left: 35px;
+
+        &::after {
+            border-right-color: white !important;
+        }
+    }
+
     .nav-bar-wrapper {
         position: fixed;
         display: flex;
@@ -176,7 +191,7 @@
                         fill: #7289da;
                     }
 
-                    &.contact path {
+                    &.email path {
                         fill: #f14336;
                     }
                 }

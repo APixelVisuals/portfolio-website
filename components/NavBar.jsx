@@ -1,4 +1,5 @@
 import React from "react";
+import Tooltip from "react-tooltip";
 import InlineSVG from "react-inlinesvg";
 import "./navBar.scss";
 
@@ -12,6 +13,8 @@ export default class NavBar extends React.Component {
     render = () => {
         return (
             <div id="nav-bar">
+
+                <Tooltip />
 
                 <div className={`nav-bar-wrapper ${this.state.menuOpen && "menu"}`}>
 
@@ -28,8 +31,8 @@ export default class NavBar extends React.Component {
                         <div className="links">
                             <a href="/twitter" className="link twitter"><InlineSVG src="/assets/twitter.svg" /></a>
                             <a href="/github" className="link github"><InlineSVG src="/assets/github.svg" /></a>
-                            <a href="/discord" className="link discord"><InlineSVG src="/assets/discord.svg" /></a>
-                            <a href="/contact" className="link contact"><InlineSVG src="/assets/envelope.svg" /></a>
+                            <div className="link discord"><span data-tip="APixel Visuals#2820" data-effect="solid" data-class="tooltip" onMouseOver={Tooltip.rebuild}><InlineSVG src="/assets/discord.svg" /></span></div>
+                            <div className="link email"><span data-tip="apixelvisualsofficial@gmail.com" data-effect="solid" data-class="tooltip" onMouseOver={Tooltip.rebuild}><InlineSVG src="/assets/envelope.svg" /></span></div>
                         </div>
 
                     </div>
@@ -40,8 +43,8 @@ export default class NavBar extends React.Component {
                             <div className="links menu">
                                 <a href="/twitter" className="link twitter"><InlineSVG src="/assets/twitter.svg" /></a>
                                 <a href="/github" className="link github"><InlineSVG src="/assets/github.svg" /></a>
-                                <div className="link discord"><InlineSVG src="/assets/discord.svg" /></div>
-                                <div className="link email"><InlineSVG src="/assets/envelope.svg" /></div>
+                                <div className="link discord"><span data-tip="APixel Visuals#2820" data-effect="solid" data-class="tooltip" onMouseOver={Tooltip.rebuild}><InlineSVG src="/assets/discord.svg" /></span></div>
+                                <div className="link email"><span data-tip="apixelvisualsofficial@gmail.com" data-effect="solid" data-class="tooltip" onMouseOver={Tooltip.rebuild}><InlineSVG src="/assets/envelope.svg" /></span></div>
                             </div>
 
                             <div className="menu-items">

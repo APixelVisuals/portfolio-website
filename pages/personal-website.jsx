@@ -43,7 +43,7 @@ export default class PersonalWebsite extends React.Component {
 
                                     <p className="name">Intro</p>
 
-                                    <p className="text">This website is where I showcase my work, link my social media, and provide a way to <a href="/contact" target="_blank">contact me</a>.</p>
+                                    <p className="text">This website is where I showcase my work.</p>
                                     <p className="text">Since this website isn't part of a large project, working on it has given me a chance to play around with website layout and design. I can change parts of it without worrying about breaking things and show what I'm capable of.</p>
 
                                 </div>

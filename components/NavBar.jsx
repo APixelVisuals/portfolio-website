@@ -53,14 +53,8 @@ export default class NavBar extends React.Component {
                                 <a href="/" className="menu-item-link"><div className="menu-item">
                                     <p className="menu-item-text">Work</p>
                                 </div></a>
-                                <a href="https://blog.apixel.me" className="menu-item-link"><div className="menu-item">
-                                    <p className="menu-item-text">Blog</p>
-                                </div></a>
                                 <a href="/about" className="menu-item-link"><div className="menu-item">
                                     <p className="menu-item-text">About</p>
-                                </div></a>
-                                <a href="/contact" className="menu-item-link"><div className="menu-item">
-                                    <p className="menu-item-text">Contact</p>
                                 </div></a>
 
                             </div>

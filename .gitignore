@@ -4,5 +4,9 @@ node_modules/
 # Env
 .env
 
+# SSL Certificate
+public.pem
+private.key
+
 # Next.JS
 .next

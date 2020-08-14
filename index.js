@@ -15,9 +15,7 @@
 
     //Create server
     createServer(
-        process.env.DEV === "true" ?
-            { key: fs.readFileSync("/home/apixel/key.pem"), cert: fs.readFileSync("/home/apixel/server.crt") } :
-            { key: fs.readFileSync("/etc/letsencrypt/live/apixel.me/privkey.pem"), cert: fs.readFileSync("/etc/letsencrypt/live/apixel.me/fullchain.pem") },
+        { key: fs.readFileSync(process.env.SSL_KEY), cert: fs.readFileSync(process.env.SSL_CERT) },
         (req, res) => {
 
             //Parse URL

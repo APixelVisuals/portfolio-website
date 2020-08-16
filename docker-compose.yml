@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  apixel-website:
+    container_name: apixel-website
+    image: node:12
+    build: .
+    restart: always
+    ports:
+      - "3001:3001"
+    volumes:
+      - /root/apixel-website/.env:/apixel-website/.env
+      - /root/apixel-website/public.pem:/apixel-website/public.pem
+      - /root/apixel-website/private.key:/apixel-website/private.key

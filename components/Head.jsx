@@ -1,5 +1,6 @@
 import React from "react";
 import NextHead from "next/head";
+import ReactGA from "react-ga";
 
 export default class Head extends React.Component {
 
@@ -23,6 +24,13 @@ export default class Head extends React.Component {
 
             </NextHead>
         );
+    };
+
+    componentDidMount = () => {
+
+        //Google analytics
+        ReactGA.initialize("UA-176058581-1");
+        ReactGA.pageview(`${window.location.pathname}${window.location.search}`);
     };
 
 };

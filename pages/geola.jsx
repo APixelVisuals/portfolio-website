@@ -57,6 +57,7 @@ export default class Geola extends React.Component {
                                     <p className="name">Tech Stack</p>
 
                                     <p className="text">Geola is a <a href="https://nodejs.org" target="_blank">Node.js</a> application that's hosted on <a href="https://m.do.co/c/df0baa1472d8" target="_blank">DigitalOcean</a>. The website is written in <a href="https://reactjs.org" target="_blank">React</a> and <a href="https://nextjs.org" target="_blank">Next.js</a>, and the backend is an express server. <a href="https://mongodb.com" target="_blank">MongoDB</a> is used for data storage, since its document-based structure is convenient for my use case.</p>
+                                    <p className="text">I also use <a href="https://influxdata.com/products/influxdb-overview" target="_blank">InfluxDB</a> to store statistics and usage data. This data is then queried and displayed using <a href="https://grafana.com" target="_blank">Grafana</a>.</p>
 
                                 </div>
 
@@ -104,7 +105,7 @@ export default class Geola extends React.Component {
 
                                     <p className="name">Deployment</p>
 
-                                    <p className="text">Geola runs on an Ubuntu server hosted on <a href="https://m.do.co/c/df0baa1472d8" target="_blank">DigitalOcean</a>. I use <a href="https://pm2.keymetrics.io" target="_blank">PM2</a> to manage processes since it's basic yet customizable. Since I have multiple projects on my server, I use <a href="https://nginx.com" target="_blank">Nginx</a> server blocks to route traffic to the correct express server for the website and <a href="https://letsencrypt.org" target="_blank">Let's Encrypt</a> to secure my website with an SSL certificate.</p>
+                                    <p className="text">Geola runs on an Ubuntu server hosted on <a href="https://m.do.co/c/df0baa1472d8" target="_blank">DigitalOcean</a>. I use <a href="https://docker.com" target="_blank">Docker</a> to manage processes since it's powerful yet easy to use. Since I have multiple projects on my server, I use <a href="https://nginx.com" target="_blank">Nginx</a> server blocks to route traffic to the correct express server for the website and <a href="http://cloudflare.com" target="_blank">Cloudflare</a> to secure my website with an SSL certificate.</p>
 
                                 </div>
 

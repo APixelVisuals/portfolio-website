@@ -68,7 +68,7 @@ export default class PersonalWebsite extends React.Component {
 
                                     <p className="name">Deployment</p>
 
-                                    <p className="text">I host this website on an Ubuntu server on <a href="https://m.do.co/c/df0baa1472d8" target="_blank">DigitalOcean</a>, with <a href="https://pm2.keymetrics.io" target="_blank">PM2</a> managing the process. Since I have multiple projects on my server, I use <a href="https://nginx.com" target="_blank">Nginx</a> server blocks to route traffic to the correct express server for the website and <a href="https://letsencrypt.org" target="_blank">Let's Encrypt</a> to secure my website with an SSL certificate.</p>
+                                    <p className="text">I host this website on an Ubuntu server on <a href="https://m.do.co/c/df0baa1472d8" target="_blank">DigitalOcean</a>, with <a href="https://docker.com" target="_blank">Docker</a> managing the process. Since I have multiple projects on my server, I use <a href="https://nginx.com" target="_blank">Nginx</a> server blocks to route traffic to the correct express server for the website and <a href="http://cloudflare.com" target="_blank">Cloudflare</a> to secure my website with an SSL certificate.</p>
 
                                 </div>
 

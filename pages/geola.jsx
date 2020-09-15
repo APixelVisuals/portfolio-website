@@ -29,7 +29,7 @@ export default class Geola extends React.Component {
 
                             <div className="section">
 
-                                <img src="https://geolabot.com/static/geola-gif.gif" className="icon" />
+                                <img src="https://geolabot.com/assets/geola-gif.gif" className="icon" />
 
                                 <h1 className="title">Geola</h1>
 

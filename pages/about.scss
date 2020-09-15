@@ -88,6 +88,20 @@
                 }
             }
 
+            &.statistics {
+                animation: bgStatistics 10s infinite;
+
+                @keyframes bgStatistics {
+                    0%, 100% {
+                        background-color: #807147bb;
+                    }
+
+                    50% {
+                        background-color: #685b3abb;
+                    }
+                }
+            }
+
             &.miscellaneous-skills {
                 animation: bgMiscellaneousSkills 10s infinite;
 
@@ -227,6 +241,20 @@
 
                             50% {
                                 color: #86a7d1;
+                            }
+                        }
+                    }
+
+                    &.statistics {
+                        animation: linkStatistics 10s infinite;
+
+                        @keyframes linkStatistics {
+                            0%, 100% {
+                                color: #e9bf4c;
+                            }
+
+                            50% {
+                                color: #f5c133;
                             }
                         }
                     }

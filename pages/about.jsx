@@ -30,6 +30,7 @@ export default class About extends React.Component {
                     <div className={`background nodejs ${this.state.section === "nodejs" && "enabled"}`} />
                     <div className={`background web-development ${this.state.section === "webDevelopment" && "enabled"}`} />
                     <div className={`background databases ${this.state.section === "databases" && "enabled"}`} />
+                    <div className={`background statistics ${this.state.section === "statistics" && "enabled"}`} />
                     <div className={`background miscellaneous-skills ${this.state.section === "miscellaneousSkills" && "enabled"}`} />
 
                 </div>
@@ -38,7 +39,7 @@ export default class About extends React.Component {
                     licenseKey="6A08320B-33D44F07-917CAF56-37905EA1"
                     scrollingSpeed={1000}
                     scrollOverflow={true}
-                    onLeave={(origin, destination) => this.setState({ section: ["intro", "nodejs", "webDevelopment", "databases", "miscellaneousSkills"][destination.index] })}
+                    onLeave={(origin, destination) => this.setState({ section: ["intro", "nodejs", "webDevelopment", "databases", "statistics", "miscellaneousSkills"][destination.index] })}
                     render={() => (
                         <Fullpage.Wrapper>
 
@@ -113,11 +114,28 @@ export default class About extends React.Component {
                                     <div className="content">
 
                                         <div className="name">
+                                            <img src="/assets/graph.svg" className="icon" />
+                                            <p className="name-text">Statistics</p>
+                                        </div>
+
+                                        <p className="text">I use <a href="https://influxdata.com/products/influxdb-overview" target="_blank" className="statistics">InfluxDB</a> to store statistics and usage data about my apps. InfluxDB's write-optimized nature is perfect for this task and its Flux query language is a powerful tool that can be used to query and display data using <a href="https://grafana.com" target="_blank" className="statistics">Grafana</a>.</p>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div className="section">
+                                <div className="section-inner">
+
+                                    <div className="content">
+
+                                        <div className="name">
                                             <img src="/assets/puzzle-piece.svg" className="icon" />
                                             <p className="name-text">Miscellaneous Skills</p>
                                         </div>
 
-                                        <p className="text">I also have some experience with <a href="https://adobe.com/products/photoshop.html" target="_blank" className="miscellaneous-skills">Adobe Photoshop</a> and <a href="https://adobe.com/products/illustrator.html" target="_blank" className="miscellaneous-skills">Illustrator</a>, which enables me to make assets for projects myself. Most of the SVGs in my projects are also ones that I've made myself.</p>
+                                        <p className="text">I also have some experience with <a href="https://adobe.com/products/photoshop.html" target="_blank" className="miscellaneous-skills">Adobe Photoshop</a> and <a href="https://adobe.com/products/illustrator.html" target="_blank" className="miscellaneous-skills">Illustrator</a>, which enables me to make assets for projects myself.</p>
                                         <p className="text">I also know some <a href="https://adobe.com/products/aftereffects.html" target="_blank" className="miscellaneous-skills">Adobe After Effects</a>, which I've used to make animated assets for my projects, including the background of this page.</p>
 
                                     </div>

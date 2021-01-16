@@ -9,6 +9,6 @@ services:
     ports:
       - "3001:3001"
     volumes:
-      - /root/apixel-website/.env:/apixel-website/.env
-      - /root/apixel-website/public.pem:/apixel-website/public.pem
-      - /root/apixel-website/private.key:/apixel-website/private.key
+      - /var/apixel-website/.env:/apixel-website/.env
+      - /var/apixel-website/public.pem:/apixel-website/public.pem
+      - /var/apixel-website/private.key:/apixel-website/private.key

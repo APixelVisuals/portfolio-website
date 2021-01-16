@@ -1,7 +1,6 @@
 import React from "react";
 import NextHead from "next/head";
 import ReactGA from "react-ga";
-import { hotjar } from "react-hotjar";
 
 export default class Head extends React.Component {
 
@@ -32,9 +31,6 @@ export default class Head extends React.Component {
         //Google analytics
         ReactGA.initialize("UA-176058581-1");
         ReactGA.pageview(`${window.location.pathname}${window.location.search}`);
-
-        //Hotjar
-        hotjar.initialize(1978357, 6);
     };
 
 };

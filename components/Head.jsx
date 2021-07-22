@@ -1,36 +1,20 @@
 import React from "react";
 import NextHead from "next/head";
-import ReactGA from "react-ga";
 
-export default class Head extends React.Component {
+export default function Head(props) {
+    return (
+        <NextHead>
 
-    constructor(props) {
-        super(props);
-    };
+            <title>{props.title}</title>
+            <meta name="description" content={props.description} />
 
-    render = () => {
-        return (
-            <NextHead>
+            <meta charSet="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1 minimum-scale=1" />
+            <meta name="theme-color" content="#000000" />
+            <link rel="shortcut icon" href="/assets/favicon.ico" />
 
-                <title>{this.props.title}</title>
-                <meta name="description" content={this.props.description} />
+            {props.redirect && <meta httpEquiv="refresh" content={`0; url=${props.redirect}`} />}
 
-                <meta charSet="utf-8" />
-                <meta name="viewport" content="width=device-width, initial-scale=1 minimum-scale=1" />
-                <meta name="theme-color" content="#010101" />
-                <link rel="shortcut icon" href="/assets/favicon.ico" />
-
-                {this.props.redirect && <meta httpEquiv="refresh" content={`0; url=${this.props.redirect}`} />}
-
-            </NextHead>
-        );
-    };
-
-    componentDidMount = () => {
-
-        //Google analytics
-        ReactGA.initialize("UA-176058581-1");
-        ReactGA.pageview(`${window.location.pathname}${window.location.search}`);
-    };
-
-};
+        </NextHead>
+    );
+}

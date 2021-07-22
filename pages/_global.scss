@@ -1,0 +1,25 @@
+// HTML and body
+html {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0px;
+}
+
+// Variables
+:root {
+    --background-color: #000000;
+    --primary-color: #000000;
+    --accent-color: #000000;
+}
+
+//Scrollbar
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #373e40;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+}

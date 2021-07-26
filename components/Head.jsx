@@ -10,7 +10,7 @@ export default function Head(props) {
 
             <meta charSet="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1 minimum-scale=1" />
-            <meta name="theme-color" content="#000000" />
+            <meta name="theme-color" content="#66b4f8" />
             <link rel="shortcut icon" href="/assets/favicon.ico" />
 
             {props.redirect && <meta httpEquiv="refresh" content={`0; url=${props.redirect}`} />}

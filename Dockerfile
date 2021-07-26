@@ -4,10 +4,10 @@ WORKDIR /apixel-website
 
 COPY . .
 
-RUN npm install
+RUN yarn
 
-RUN npm run build
+RUN yarn build
 
 EXPOSE 3001
 
-CMD ["node", "index.js"]
+CMD ["yarn", "start"]

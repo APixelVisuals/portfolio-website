@@ -7,24 +7,46 @@
     background-color: var(--accent-background-color);
     transition: 1s 0.15s cubic-bezier(0.075, 0.82, 0.165, 1);
 
+    @media screen and (max-width: 700px) {
+        width: 100%;
+        height: 0px;
+        top: 80px;
+        left: 0px;
+    }
+
     &.menu_open {
         width: calc(100% - 80px);
         transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        @media screen and (max-width: 700px) {
+            width: 100%;
+            height: calc(100vh - 80px);
+        }
     }
 }
 
 .menu_content {
     display: flex;
-    width: 100%;
+    width: 0px;
     height: 100vh;
     flex-wrap: nowrap;
     flex-direction: column;
     opacity: 0;
     transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 
+    @media screen and (max-width: 700px) {
+        width: 100%;
+        height: 0px;
+    }
+
     &.menu_content_open {
+        width: 100%;
         opacity: 1;
         transition: 1s 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        @media screen and (max-width: 700px) {
+            height: calc(100vh - 80px);
+        }
     }
 }
 
@@ -87,11 +109,18 @@
     align-items: center;
     background-color: var(--accent-background-color);
     padding: 35px 0px;
+
+    @media screen and (max-width: 700px) {
+        width: calc(100% - 70px);
+        height: 80px;
+        flex-direction: row;
+        padding: 0px 35px;
+    }
 }
 
 .navbar_fill {
     position: absolute;
-    width: 0;
+    width: 0px;
     height: 100%;
     top: 0px;
     left: 0px;
@@ -99,8 +128,17 @@
     transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     z-index: -1;
 
+    @media screen and (max-width: 700px) {
+        width: 100%;
+        height: 0px;
+    }
+
     &.navbar_filled {
         width: 100%;
+
+        @media screen and (max-width: 700px) {
+            height: 100%;
+        }
     }
 }
 
@@ -148,15 +186,23 @@
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto;
     padding-bottom: 45px;
+
+    @media screen and (max-width: 700px) {
+        flex-direction: row;
+        padding-bottom: 0px;
+    }
 }
 
 .icon {
     width: 35px;
     height: auto;
     margin: 25px 0px;
+
+    @media screen and (max-width: 700px) {
+        margin: 0px 15px;
+    }
 
     &.white_icon path {
         fill: white;

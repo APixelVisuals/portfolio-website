@@ -1,6 +1,6 @@
-FROM node:12
+FROM node:14
 
-WORKDIR /apixel-website
+WORKDIR /portfolio-website
 
 COPY . .
 

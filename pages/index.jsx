@@ -40,19 +40,19 @@ const projects = [
         name: "Illustra",
         icon: "illustra",
         description: "Illustra is an object-oriented, document based Node.js image processing toolkit",
-        link: "https://illustra.apixel.me"
+        link: "https://illustra.pranav.page"
     },
     {
         name: "Aeracord",
         icon: "aeracord",
         description: "Aeracord is a lightweight library for the Discord API with flexible caching",
-        link: "https://aeracord.apixel.me"
+        link: "https://aeracord.pranav.page"
     },
     {
         name: "GitBound",
         icon: "gitbound",
         description: "GitBound is a Discord bot that sends activity from GitHub repos to Discord servers",
-        link: "https://gitbound.apixel.me"
+        link: "https://gitbound.com"
     },
     {
         name: "Geola",

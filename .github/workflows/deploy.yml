@@ -20,4 +20,4 @@ jobs:
       - name: "Deploy"
         env:
           IP: ${{ secrets.IP }}
-        run: ssh -i $HOME/secrets/deploy_key ci@$IP "cd /var/apixel-website && git pull && docker-compose up -d --build"
+        run: ssh -i $HOME/secrets/deploy_key ci@$IP "cd /var/portfolio-website && git pull && docker-compose up -d --build"

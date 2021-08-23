@@ -51,7 +51,7 @@ const projects = [
     {
         name: "GitBound",
         icon: "gitbound",
-        description: "GitBound is a Discord bot that sends activity from GitHub repos to Discord servers",
+        description: "GitBound sends activity from GitHub repos to other integrations",
         link: "https://gitbound.com"
     },
     {
